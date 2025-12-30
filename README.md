@@ -37,12 +37,12 @@ The system includes intelligent monitoring, protection, and management features 
 
 ```
 pure-sinus/
-├── hardware/                      # PCB designs and circuit schematics
+├── hardware/                      # Altium PCB designs and circuit schematics
 │   ├── inverter_12V_220V_500W/    # Main inverter/power station board
 │   │   ├── Fabrication Files/     # Gerber, BOM, and manufacturing files
 │   │   └── libs/                  # Component libraries for Altium Designer
 │   └── tl494_pwm_controller/      # Dedicated PWM controller module
-├── software/                      # Embedded firmware and control logic
+├── software/                      # PlatformIO firmware and control logic
 │   └── inverter-controller/       # Arduino firmware (PlatformIO-based)
 │       ├── src/main.cpp           # Main controller state machine
 │       ├── include/               # Header files and configuration
@@ -68,7 +68,7 @@ pure-sinus/
 ### 1. TL494 PWM Module Assembly And Setup
 
 - `pwm_controller_board.rar` contains all required files for PCB manufacturing the TL494 PWM module and located in `/tl494_pwm_controller/Fabrication Files`
--<img style="display: block" src="assets/tl494_pcb_data.jpg" width="400" alt="pcb_request_data">
+- <img style="display: block" src="assets/tl494_pcb_data.jpg" width="400" alt="pcb_request_data">
 - Follow the provided BOM and Gerber files to fabricate and assemble the PWM module
 - <img style="display: block" src="assets/tl494_pcb.jpg" width="200" alt="tl494_pcb">
 - PWM module setup: 
@@ -82,7 +82,7 @@ pure-sinus/
 
 The EGS002 module handles pure sinus wave generation
 - <img style="display: block" src="assets/egs002.jpg" width="200" alt="egs_pcb">
-- Solder `JP8` jumper to `JP4`, to set dead time for 1.0us
+- Solder `JP8` jumper to `JP4`, to set dead time for `1.0us`
 - <img style="display: block" src="assets/egs002_config.jpg" width="200" alt="egs_pcb_config">
 - <img style="display: block" src="assets/egs002_config_doc.jpg" width="300" alt="egs_pcb_config_doc">
 - No additional configuration is required
