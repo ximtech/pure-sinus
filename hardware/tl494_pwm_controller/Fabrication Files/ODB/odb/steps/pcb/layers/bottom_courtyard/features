@@ -1,0 +1,21 @@
+#Layer_Color=0
+#
+#Feature symbol names
+#
+$0 r196.8504
+
+#
+#Feature attribute names
+#
+@0 .geometry
+@1 .pad_usage
+
+#
+#Feature attribute text strings
+#
+&0 
+
+#
+#Layer features
+#
+P 0.1279528 1.6437008 0 P 0 0 ;0=0,1=0

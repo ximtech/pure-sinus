@@ -1,0 +1,20 @@
+UNITS=INCH
+#Layer_Color=32896
+#
+#Feature symbol names
+#
+
+#
+#Feature attribute names
+#
+@0 .nomenclature
+@1 .string
+@2 .string_angle
+
+#
+#Feature attribute text strings
+#
+
+#
+#Layer features
+#

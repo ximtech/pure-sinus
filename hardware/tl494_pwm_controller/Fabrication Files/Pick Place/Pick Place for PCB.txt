@@ -1,0 +1,42 @@
+Altium Designer Pick and Place Locations
+C:\Users\Stason\Desktop\Projects\pure-sinus\tl494_pwm_controller\.\Fabrication Files\Pick Place\Pick Place for PCB.txt
+
+========================================================================================================================
+File Design Information:
+
+Date:       24.04.25
+Time:       13:03
+Revision:   Not in VersionControl
+Variant:    No variations
+Units used: mm
+
+Designator Comment     Layer    Footprint                 Center-X(mm) Center-Y(mm) Rotation Description                                                                     
+D1         LED         TopLayer My_LED3MM                 45.2500      12.9800      270      "Typical INFRARED GaAs LED"                                                     
+VR3        "100 kOhms" TopLayer TRIM_3296W-1-502          20.6100      39.2400      180      "NON-RoHS, 3/8 Sq, Thru-Hole, TRIMMER, 5 Kohms, Cermet, 25 Turns, Pwr-Rtg 0.5W" 
+C10        4.7uF       TopLayer MY_E2.5-5mm               22.7500      20.5000      180      "Polar capacitor"                                                               
+VR2        "10 kOhms"  TopLayer TRIM_3296W-1-502          33.0700      39.2300      180      "NON-RoHS, 3/8 Sq, Thru-Hole, TRIMMER, 5 Kohms, Cermet, 25 Turns, Pwr-Rtg 0.5W" 
+VR1        "10 kOhms"  TopLayer TRIM_3296W-1-502          46.3800      27.4800      270      "NON-RoHS, 3/8 Sq, Thru-Hole, TRIMMER, 5 Kohms, Cermet, 25 Turns, Pwr-Rtg 0.5W" 
+U3         MIC4427ZN   TopLayer DIP787W46P254L927H533Q8   25.7500      12.5600      270      "IC GATE DRVR LOW-SIDE 8DIP"                                                    
+U2         TL494IN     TopLayer DIP794W45P254L1969H508Q16 26.1100      28.2300      270      "40V, 0.2A 300KHz PWM controller"                                               
+U1         PC817       TopLayer DIP762W50P254L495H455Q4   8.0000       7.5000       90       "Optoisolator Transistor Output - 1 Channel 4-DIP"                              
+R11        "10 kOhms"  TopLayer MY_(0.25w)_0207_10        19.7600      5.7500       360      "Standard resistor"                                                             
+R10        "10 kOhms"  TopLayer MY_(0.25w)_0207_10        32.4600      5.7500       360      "Standard resistor"                                                             
+R9         "10 kOhms"  TopLayer MY_(0.25w)_0207_10        9.7500       14.7700      360      "Standard resistor"                                                             
+R8         "2 kOhms"   TopLayer MY_(0.25w)_0207_10        17.2200      34.7300      360      "Standard resistor"                                                             
+R7         "2.2 kOhms" TopLayer MY_(0.25w)_0207_10        50.8600      7.4800       90       "Standard resistor"                                                             
+R6         "10 kOhms"  TopLayer MY_(0.25w)_0207_10        4.7500       25.0000      270      "Standard resistor"                                                             
+R5         "5.6 kOhms" TopLayer MY_(0.25w)_0207_10        38.5900      27.7500      90       "Standard resistor"                                                             
+R4         "1 kOhms"   TopLayer MY_(0.25w)_0207_10        10.8900      25.0000      90       "Standard resistor"                                                             
+R3         "15 kOhms"  TopLayer MY_(0.25w)_0207_10        41.6700      27.7500      90       "Standard resistor"                                                             
+R2         "10 kOhms"  TopLayer MY_(0.25w)_0207_10        17.6100      14.7300      90       "Standard resistor"                                                             
+R1         "10 kOhms"  TopLayer MY_(0.25w)_0207_10        7.7500       25.0000      90       "Standard resistor"                                                             
+P1         "Header 8"  TopLayer MY_MA08-1W                27.5000      1.7500       180      "Header, 8-Pin, Dual row"                                                       
+C9         100nF       TopLayer My_cap100n                28.7700      21.4962      180      "None polar capacitor"                                                          
+C8         100nF       TopLayer My_cap100n                39.4200      13.5000      90       "None polar capacitor"                                                          
+C7         4.7uF       TopLayer MY_E2.5-5mm               34.6700      13.5000      90       "Polar capacitor"                                                               
+C6         1nF         TopLayer My_cap100n                26.1100      34.7300      360      "None polar capacitor"                                                          
+C5         100nF       TopLayer My_cap100n                13.7500      28.2700      90       "None polar capacitor"                                                          
+C4         220uF       TopLayer MY_E3.5-8mm               44.1700      6.0280       90       "Polar capacitor"                                                               
+C3         100nF       TopLayer My_cap100n                14.1100      20.7300      270      "None polar capacitor"                                                          
+C2         100nF       TopLayer My_cap100n                39.8600      19.4800      360      "None polar capacitor"                                                          
+C1         4.7uF       TopLayer MY_E2.5-5mm               42.2500      39.1883      270      "Polar capacitor"                                                               

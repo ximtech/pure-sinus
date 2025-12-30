@@ -1,0 +1,4 @@
+Layer Pairs Export File for PCB: C:\Users\Stason\Desktop\Projects\pure-sinus\hardware\invertor_12V_220V_500W\PCB.PcbDoc
+LayersSetName=Top_Bot_Thru_Holes|DrillFile=pcb-roundholes.txt|DrillLayers=gtl,gbl
+LayersSetName=Top_Bot_Slot_Holes|DrillFile=pcb-slotholes.txt|DrillLayers=gtl,gbl
+LayersSetName=Top_Bot_Rect_Holes|DrillFile=pcb-rectholes.txt|DrillLayers=gtl,gbl
