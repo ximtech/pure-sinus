@@ -1,6 +1,6 @@
 # Pure-Sinus
 
-The purpose of this project is to provide a universal solutions for portable power stations, battery chargers and inverters. 
+The purpose of this project is to provide universal solutions for portable power stations, battery chargers, and inverters. 
 
 ## Table of Contents
 
@@ -11,9 +11,9 @@ The purpose of this project is to provide a universal solutions for portable pow
 
 <img src="solr-mobile-power-manager/assets/solr_board_view.jpg" width="200" alt="solr_board_view">
 
-A Small, but powerful battery powered control electronics with output power up to 500W. 
-Also, it can be used as a standalone pure sine wave inverter from 12V DC to 220V AC.
-The system includes intelligent monitoring, protection, and management features for safe, reliable portable power delivery.
+A compact and powerful battery-powered control electronics system with output power up to 500W. 
+It can also be used as a standalone pure sine wave inverter converting 12V DC to 220V AC.
+The system includes intelligent monitoring, protection, and management features for safe and reliable portable power delivery.
 
 ### Key Features
 
@@ -128,7 +128,7 @@ The EGS002 module handles pure sinus wave generation
 17. Finally, glue thermal sensors to heat sinks using thermal adhesive glue (`heatsinkplaster`)
 - <img src="solr-mobile-power-manager/assets/lm35_set.jpg" width="200" alt="lm35_set">
 
-### Parts List
+### PCB Components
 - Heat Sinks **HS1 and HS2** `150x19.7x15.6mm`: [link Aliexpress](https://www.aliexpress.com/item/1005004124759503.html?spm=a2g0o.productlist.main.1.42223a20SAT5k2&algo_pvid=6427d303-d8d6-43af-a767-dd0f720f51ae&algo_exp_id=6427d303-d8d6-43af-a767-dd0f720f51ae-0&pdp_ext_f=%7B%22order%22%3A%22378%22%2C%22spu_best_type%22%3A%22order%22%2C%22eval%22%3A%221%22%2C%22fromPage%22%3A%22search%22%7D&pdp_npi=6%40dis%21EUR%212.55%212.55%21%21%2120.51%2120.51%21%40211b628117670993457081121e6103%2112000030402237637%21sea%21LV%21143434442%21X%211%210%21n_tag%3A-29919%3Bd%3A4c3c036e%3Bm03_new_user%3A-29895&curPageLogUid=1Bff7gj6ESD6&utparam-url=scene%3Asearch%7Cquery_from%3A%7Cx_object_id%3A1005004124759503%7C_p_origin_prod%3A)
 - Transformer **T1** `12V To 0-220V-380V 18V 500W EC42`: [link Aliexpress](https://www.aliexpress.com/item/1005003166892846.html?spm=a2g0o.order_list.order_list_main.5.2afd1802XkXKQq)
 - Inductor **L2** `1.5 V. 2mH`: [link Aliexpress](https://www.aliexpress.com/item/1005006733553679.html?spm=a2g0o.order_list.order_list_main.382.6bd81802CETRoA)
@@ -159,6 +159,68 @@ This project operates with dangerous voltages
 - [ ] **Battery Chemistry Flexibility**: Support for LiFePO4, Lead-acid, and other battery types
 - [ ] **Solar Input**: Add MPPT/PWM solar charge controller for renewable energy integration
 
+---
+
 # Solr Battery Controller
 
-in progress...
+A universal `DC 12V 30A` lithium battery controller.
+The compact PCB design provides robust protection against battery over-discharge and over-current conditions,
+ensuring maximum battery longevity and optimal performance with integrated power on delay feature.
+
+<img src="solr-battery-controller/assets/contoller_pcb.jpg" width="300" alt="solr_controller_pcb">
+
+### Key Features
+
+- **Universal 12V Battery Compatibility**: Easy to set for various 12V battery types
+- **Low Voltage Protection**: Detects and prevents dangerous voltage drops
+- **Overcurrent Protection**: Output load disconnection on excessive current draw
+- **Power On Delay**: Auto recovery after power interruptions with hysteresis, battery should be charged at least 10% for power on 
+- **Cooling Fan Output**: Automatic fan control based on current consumption. Can be reprogrammed as battery charger
+- **Reverse Polarity Protection**
+- **Compact Design**: 94mm x 70mm
+
+### Project Structure
+
+```
+solr-battery-controller/               # Battery controller folder
+├── assets/                            # Images and visual assets
+├── documents/                         # Datasheets and technical documentation
+├── altium/                            # Altium PCB designs and circuit schematics
+│   └── solr-controller-base/          # Main controller board
+│       ├── Fabrication Files/         # Gerber, BOM, and manufacturing files
+│       └── *.IntLib                   # Component libraries for Altium Designer
+└── software/                          # Firmware and control logic
+    └── solr-controller-base/          # Arduino firmware (PlatformIO-based)
+        ├── src/                       # Source code files
+        ├── include/                   # Header files and configuration
+        ├── lib/                       # Custom and external libraries
+        ├── test/                      # Unit tests
+        └── platformio.ini             # PlatformIO project configuration
+```
+
+### PCB Assembly
+
+- <img src="solr-battery-controller/assets/controller_board.jpg" width="300" alt="solr_controller_pcb">
+- `solr-controller-board.rar` contains all required files for PCB manufacturing the board and located in `/altium/solr-controller-base/Fabrication Files/`
+- <img src="solr-battery-controller/assets/pcb_request_data.jpg" width="400" alt="solr_controller_pcb">
+
+### PCB Components
+
+- Relay **K1** `12V 30A`: [link Aliexpress](https://www.aliexpress.com/item/1005004371446685.html?spm=a2g0o.productlist.main.4.1e95351ck3FxvC&aem_p4p_detail=202512301211284046174373068260000285333&algo_pvid=0a38c24e-9a0b-48a9-8ece-bbadc1ed5a35&algo_exp_id=0a38c24e-9a0b-48a9-8ece-bbadc1ed5a35-3&pdp_ext_f=%7B%22order%22%3A%2258%22%2C%22spu_best_type%22%3A%22order%22%2C%22eval%22%3A%221%22%2C%22fromPage%22%3A%22search%22%7D&pdp_npi=6%40dis%21EUR%212.30%212.29%21%21%212.64%212.64%21%40211b628117671254885737151e60ff%2112000028942938667%21sea%21LV%21143434442%21X%211%210%21n_tag%3A-29919%3Bd%3A4c3c036e%3Bm03_new_user%3A-29895&curPageLogUid=ecZqGVMWNfA1&utparam-url=scene%3Asearch%7Cquery_from%3A%7Cx_object_id%3A1005004371446685%7C_p_origin_prod%3A&search_p4p_id=202512301211284046174373068260000285333_1)
+- Connectors **J3 J4** `HB9500 2pin` : [link Aliexpress](https://www.aliexpress.com/item/1005008336461654.html?spm=a2g0o.detail.pcDetailTopMoreOtherSeller.5.5da4zYsrzYsrUS&gps-id=pcDetailTopMoreOtherSeller&scm=1007.40050.354490.0&scm_id=1007.40050.354490.0&scm-url=1007.40050.354490.0&pvid=bdbd0872-ae3c-45be-8bcf-08dd0156c3fc&_t=gps-id:pcDetailTopMoreOtherSeller,scm-url:1007.40050.354490.0,pvid:bdbd0872-ae3c-45be-8bcf-08dd0156c3fc,tpp_buckets:668%232846%238111%231996&pdp_ext_f=%7B%22order%22%3A%22-1%22%2C%22eval%22%3A%221%22%2C%22sceneId%22%3A%2230050%22%2C%22fromPage%22%3A%22recommend%22%7D&pdp_npi=6%40dis%21EUR%210.50%210.50%21%21%210.58%210.58%21%40211b613917671256503675517e5ba9%2112000044644274242%21rec%21LV%21143434442%21XZ%211%210%21n_tag%3A-29919%3Bd%3A4c3c036e%3Bm03_new_user%3A-29895&utparam-url=scene%3ApcDetailTopMoreOtherSeller%7Cquery_from%3A%7Cx_object_id%3A1005008336461654%7C_p_origin_prod%3A)
+- Current sensor **U3** `ACS712 30A`: [link Aliexpress](https://www.aliexpress.com/item/1005008877256845.html?spm=a2g0o.productlist.main.8.1c516013m5kkaQ&aem_p4p_detail=2025123012292518547528048932480000304795&algo_pvid=71db4e8c-a038-4a7a-af75-4887cdcbba6d&algo_exp_id=71db4e8c-a038-4a7a-af75-4887cdcbba6d-7&pdp_ext_f=%7B%22order%22%3A%2215%22%2C%22eval%22%3A%221%22%2C%22fromPage%22%3A%22search%22%7D&pdp_npi=6%40dis%21EUR%214.43%213.99%21%21%215.09%214.58%21%40211b876e17671265658067230e5f86%2112000047054668964%21sea%21LV%21143434442%21X%211%210%21n_tag%3A-29919%3Bd%3A4c3c036e%3Bm03_new_user%3A-29895&curPageLogUid=34I8RfFB5gaF&utparam-url=scene%3Asearch%7Cquery_from%3A%7Cx_object_id%3A1005008877256845%7C_p_origin_prod%3A&search_p4p_id=2025123012292518547528048932480000304795_2)
+- MCU **U2**: Arduino Nano (ATmega328P)
+- The complete Bill of Materials (BOM) can be found in the `/altium/solr-controller-base/Fabrication Files/` directory as `BOM_Solr_Battery_Controller.xlsx`.
+
+### Firmware Architecture
+
+Built with **PlatformIO** and **Arduino Framework** targeting Arduino Nano `ATmega328P`.
+
+**Debug**:
+- **When debug switch set** `P1`: 9600 baud UART can be used for monitoring and troubleshooting
+
+## Next Version Improvements
+
+- [ ] **Battery Chemistry Flexibility**: Support for LiFePO4, Lead-acid, and other battery types
+
+---
