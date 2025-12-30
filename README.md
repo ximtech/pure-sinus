@@ -2,6 +2,11 @@
 
 The purpose of this project is to provide a universal solutions for portable power stations, battery chargers and inverters. 
 
+## Table of Contents
+
+- [Solr Mobile Power Management Platform](#solr-mobile-power-management-platform)
+- [Solr Battery Controller](#solr-battery-controller)
+
 # Solr Mobile Power Management Platform
 
 <img src="solr-mobile-power-manager/assets/solr_board_view.jpg" width="200" alt="solr_board_view">
@@ -37,10 +42,10 @@ The system includes intelligent monitoring, protection, and management features 
 
 ```
 pure-sinus/
-└── solr-mobile-power-manager/         # Main SOLR platform folder
+└── solr-mobile-power-manager/         # Main folder
     ├── assets/                        # Images and visual assets
     ├── documents/                     # Datasheets and technical documentation
-    ├── hardware/                      # Altium PCB designs and circuit schematics
+    ├── altium/                      # Altium PCB designs and circuit schematics
     │   ├── inverter_12V_220V_500W/    # Main inverter/power station board
     │   │   ├── Fabrication Files/     # Gerber, BOM, and manufacturing files
     │   │   └── libs/                  # Component libraries for Altium Designer
@@ -73,7 +78,7 @@ pure-sinus/
 
 ### 1. TL494 PWM Module Assembly And Setup
 
-- `pwm_controller_board.rar` contains all required files for PCB manufacturing the TL494 PWM module and located in `/tl494_pwm_controller/Fabrication Files`
+- `pwm_controller_board.rar` contains all required files for PCB manufacturing the TL494 PWM module and located in `/altium/tl494_pwm_controller/Fabrication Files`
 - <img src="solr-mobile-power-manager/assets/tl494_pcb_data.jpg" width="400" alt="pcb_request_data">
 - Follow the provided BOM and Gerber files to fabricate and assemble the PWM module
 - <img src="solr-mobile-power-manager/assets/tl494_pcb.jpg" width="200" alt="tl494_pcb">
@@ -95,7 +100,7 @@ The EGS002 module handles pure sinus wave generation
 
 ### 3. Inverter Board Assembly And Setup
 
-- `inverter_board.rar` contains all required files for PCB manufacturing the board and located in `/inverter_12V_220V_500W/Fabrication Files/`
+- `inverter_board.rar` contains all required files for PCB manufacturing the board and located in `/altium/inverter_12V_220V_500W/Fabrication Files/`
 - <img src="solr-mobile-power-manager/assets/inverter_pcb_data.jpg" width="300" alt="inverter_pcb_request_data">
 - Follow the provided BOM and Gerber files to fabricate and assemble the PCB
 - <img src="solr-mobile-power-manager/assets/inverter_board.jpg" width="300" alt="inverter_board">
@@ -132,7 +137,7 @@ The EGS002 module handles pure sinus wave generation
 - Shunt Resistor **SH1 and SH2** `20mR 1x10`: [link Aliexpress](https://www.aliexpress.com/item/1005005512229757.html?spm=a2g0o.order_list.order_list_main.372.6bd81802CETRoA)
 - Screw terminal connectors **J3, J4, J5, J6**: [link Aliexpress](https://www.aliexpress.com/item/1005007060857910.html?spm=a2g0o.order_list.order_list_main.377.6bd81802CETRoA)
 - Fuses **F1, F2** `25A`: [link Aliexpress](https://www.aliexpress.com/item/1005003956737422.html?spm=a2g0o.order_list.order_list_main.347.6bd81802CETRoA)
-- The complete Bill of Materials (BOM) can be found in the `/inverter_12V_220V_500W/Fabrication Files/` directory as `BOM_Inverter_12V_220V_500W.xlsx`.
+- The complete Bill of Materials (BOM) can be found in the `/altium/inverter_12V_220V_500W/Fabrication Files/` directory as `BOM_Inverter_12V_220V_500W.xlsx`.
 
 ### Firmware Architecture
 
@@ -153,3 +158,7 @@ This project operates with dangerous voltages
 - [ ] **Multi-Output USB**: Integrate USB-C and USB-A charging ports with PD protocol support, with up to 100W
 - [ ] **Battery Chemistry Flexibility**: Support for LiFePO4, Lead-acid, and other battery types
 - [ ] **Solar Input**: Add MPPT/PWM solar charge controller for renewable energy integration
+
+# Solr Battery Controller
+
+in progress...

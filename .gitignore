@@ -4,12 +4,16 @@
 *.iml
 *.ipr
 
-/hardware/tl494_pwm_controller/History/
-/hardware/tl494_pwm_controller/__Previews/
-/hardware/tl494_pwm_controller/Fabrication Files/Status Report.Txt
-/hardware/tl494_pwm_controller/Project Logs for tl494_pwm_controller/
+/altium/tl494_pwm_controller/History/
+/altium/tl494_pwm_controller/__Previews/
+/altium/tl494_pwm_controller/Fabrication Files/Status Report.Txt
+/altium/tl494_pwm_controller/Project Logs for tl494_pwm_controller/
 
-/hardware/inverter_12V_220V_500W/History/
-/hardware/inverter_12V_220V_500W/__Previews/
-/hardware/inverter_12V_220V_500W/Fabrication Files/Status Report.Txt
-/hardware/inverter_12V_220V_500W/Project Logs for inverter-12v-220v-500w/
+/altium/inverter_12V_220V_500W/History/
+/altium/inverter_12V_220V_500W/__Previews/
+/altium/inverter_12V_220V_500W/Fabrication Files/Status Report.Txt
+/altium/inverter_12V_220V_500W/Project Logs for inverter-12v-220v-500w/
+
+/solr-battery-controller/altium/solr-controller-base/Project Logs for solr-controller-base/
+/solr-battery-controller/altium/solr-controller-base/__Previews/
+/solr-battery-controller/altium/solr-controller-base/History/
