@@ -26,7 +26,7 @@ The system includes intelligent monitoring, protection, and management features 
   - **Overload & Short-Circuit Protection**
   - **Dual Current Sensing**: Independent monitoring of DC output and AC inverter currents
   - **Dual Temperature Monitoring**: With automatic fan control and overheat protection
-  - **Bidirectional DC**: DC output can also be used to charge the battery
+  - **Bidirectional DC**: DC output can also be used as a battery charger
   - **Low power consumption in standby mode**
 - **Portable & Modular**: Designed as a platform for expanding functionality
 
