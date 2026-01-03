@@ -2,6 +2,7 @@
 
 #include "Sound.h"
 #include "ACS712.h"
+#include "BatteryTypeEnum.h"
 
 #define DEBUG_EN_PIN         9
 #define BUILD_IN_LED_PIN    13
@@ -17,9 +18,6 @@
 #define VOLTAGE_READ_COUNT              4
 #define MIN_CURRENT_THRESHOLD_VALUE     0.1f
 #define CURRENT_CORRECTION_COEFFICIENT  0.4f
-#define MAX_LOAD_CURRENT                30.0f
-#define MIN_BATTERY_VOLTAGE             9.9f    // 3.3V * 3 -> 0%
-#define BATTERY_RECOVERY_VOLTAGE        10.8f  // 3.6V * 3 -> 10%
 #define CURRENT_OVERLOAD_TIMEOUT_MS     5000
 #define LOW_BATTERY_SIGNAL_COUNT        10
 
@@ -28,6 +26,12 @@
 #define FAN_SPEED_100_PERCENTS 255
 #define FAN_SPEED_50_PERCENTS  128
 #define FAN_SPEED_0_PERCENTS   0
+
+static const BatteryType batteryType = LI_ION_3S;
+#define MAX_LOAD_CURRENT              MAX_BATTERY_LOAD_CURRENT_AMPS
+#define MIN_BATTERY_VOLTAGE           getBatteryMinVoltage(batteryType)
+#define BATTERY_RECOVERY_VOLTAGE      getBatteryRecoveryVoltage(batteryType)
+
 /*
  * Two resistors divider of 30K and 7.5K
  *
