@@ -122,7 +122,7 @@ The EGS002 module handles pure sinus wave generation
 12. Measure the output `AC` voltage, adjust the `VR1` potentiometer to set output voltage to `230V AC`
 13. Check output `AC` waveform with oscilloscope, it should be a clean sine wave, also check with a load connected
 - <img src="solr-mobile-power-manager/assets/ac_config.jpg" width="300" alt="ac_config">
-14. Check output `DC` voltage, it should be `12V DC`
+14. Check `DC` voltage on `DC-` and `DC+` outputs, it should be `12V DC`
 15. Connect cooling fan: it should run for a short time on power on, during system self-check
 16. Then, set debug switch `P1` to on. Check ACS current sensors outputs, adjust if needed
 17. Finally, glue thermal sensors to heat sinks using thermal adhesive glue (`heatsinkplaster`)
@@ -154,10 +154,10 @@ This project operates with dangerous voltages
 
 ## Next Version Improvements
 
-- [ ] **OLED display and controls**: Add an OLED display and control buttons for monitoring and outputs on/off control
-- [ ] **Multi-Output USB**: Integrate USB-C and USB-A charging ports with PD protocol support, with up to 100W
-- [ ] **Battery Chemistry Flexibility**: Support for LiFePO4, Lead-acid, and other battery types
-- [ ] **Solar Input**: Add MPPT/PWM solar charge controller for renewable energy integration
+- ⬜ **OLED display and controls**: Add an OLED display and control buttons for monitoring and outputs on/off control
+- ⬜ **Multi-Output USB**: Integrate USB-C and USB-A charging ports with PD protocol support, with up to 100W
+- ⬜ **Battery Chemistry Flexibility**: Support for LiFePO4, Lead-acid, and other battery types
+- ⬜ **Solar Input**: Add MPPT/PWM solar charge controller for renewable energy integration
 
 ---
 
@@ -221,6 +221,6 @@ Built with **PlatformIO** and **Arduino Framework** targeting Arduino Nano `ATme
 
 ## Next Version Improvements
 
-- [ ] **Battery Chemistry Flexibility**: Support for LiFePO4, Lead-acid, and other battery types
+- ✅ **Battery Chemistry Flexibility**: Support for LiFePO4, Lead-acid, and other battery types
 
 ---
