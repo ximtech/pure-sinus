@@ -9,7 +9,7 @@ The purpose of this project is to provide universal solutions for portable power
 
 # Solr Mobile Power Management Platform
 
-<img src="solr-mobile-power-manager/assets/solr_board_view.jpg" width="200" alt="solr_board_view">
+<img src="solr-mobile-power-manager/assets/solr_board_view.jpg" width="400" alt="solr_board_view">
 
 A compact and powerful battery-powered control electronics system with output power up to 500W. 
 It can also be used as a standalone pure sine wave inverter converting 12V DC to 220V AC.
