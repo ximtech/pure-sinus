@@ -15,6 +15,74 @@ UNITS=INCH
 &0 bottom_layer
 
 # CMP 0
+CMP 1 4.8326772 0.8070866 0 N C44 0.1_F ;0=1,1=0.0453,5=0
+PRP Applications 'General Purpose'
+PRP Capacitance '0.1µF'
+PRP ComponentLink1Description 'Datasheet'
+PRP ComponentLink1URL 'http://datasheets.avx.com/Y5V.pdf'
+PRP ComponentLink2Description 'DigiKey Link'
+PRP ComponentLink2URL 'http://digikey.com/product-detail/en/avx-corporation/08055G104ZAT2A/478-1421-1-ND/564453'
+PRP Device_Package '0805 (2012 Metric)'
+PRP id '137'
+PRP LastUpdated '2020-09-02T01:04:40.390'
+PRP Lifecycle_Status 'Active'
+PRP Manufacturer 'AVX Corporation'
+PRP Minimum_Order '1'
+PRP Mounting_Type 'Surface Mount, MLCC'
+PRP Operating_Temperature '-30°C ~ 85°C'
+PRP Package_/_Case '0805 (2012 Metric)'
+PRP Packaging 'TapeAndReel'
+PRP Part_Number '08055G104ZAT2A'
+PRP Part_Status 'Active'
+PRP PartId '3166'
+PRP Price '0.02'
+PRP Series '-'
+PRP Size_/_Dimension '0.079_ L x 0.049_ W (2.01mm x 1.25mm)'
+PRP Supplier_1 'DigiKey'
+PRP Supplier_Part_Number_1 '478-1421-1-ND'
+PRP Temperature_Coefficient 'Y5V (F)'
+PRP Thickness_(Max) '0.028_ (0.71mm)'
+PRP Tolerance '-20%, +80%'
+PRP Value '0.1µF'
+PRP Voltage_-_Rated '50V'
+TOP 0 4.8641733 0.8070866 270 N 51 37 1
+TOP 1 4.8011812 0.8070866 270 N 7 1 2
+#
+# CMP 1
+CMP 1 3.9938247 4.213158 90 N C43 0.1_F ;0=1,1=0.0453,5=0
+PRP Applications 'General Purpose'
+PRP Capacitance '0.1µF'
+PRP ComponentLink1Description 'Datasheet'
+PRP ComponentLink1URL 'http://datasheets.avx.com/Y5V.pdf'
+PRP ComponentLink2Description 'DigiKey Link'
+PRP ComponentLink2URL 'http://digikey.com/product-detail/en/avx-corporation/08055G104ZAT2A/478-1421-1-ND/564453'
+PRP Device_Package '0805 (2012 Metric)'
+PRP id '137'
+PRP LastUpdated '2020-09-02T01:04:40.390'
+PRP Lifecycle_Status 'Active'
+PRP Manufacturer 'AVX Corporation'
+PRP Minimum_Order '1'
+PRP Mounting_Type 'Surface Mount, MLCC'
+PRP Operating_Temperature '-30°C ~ 85°C'
+PRP Package_/_Case '0805 (2012 Metric)'
+PRP Packaging 'TapeAndReel'
+PRP Part_Number '08055G104ZAT2A'
+PRP Part_Status 'Active'
+PRP PartId '3166'
+PRP Price '0.02'
+PRP Series '-'
+PRP Size_/_Dimension '0.079_ L x 0.049_ W (2.01mm x 1.25mm)'
+PRP Supplier_1 'DigiKey'
+PRP Supplier_Part_Number_1 '478-1421-1-ND'
+PRP Temperature_Coefficient 'Y5V (F)'
+PRP Thickness_(Max) '0.028_ (0.71mm)'
+PRP Tolerance '-20%, +80%'
+PRP Value '0.1µF'
+PRP Voltage_-_Rated '50V'
+TOP 0 3.9938247 4.2446541 180 N 51 44 1
+TOP 1 3.9938247 4.181662 180 N 60 0 2
+#
+# CMP 2
 CMP 1 0.1870079 1.25 270 N C41 0.1_F ;0=1,1=0.0453,5=0
 PRP Applications 'General Purpose'
 PRP Capacitance '0.1µF'
@@ -45,10 +113,10 @@ PRP Thickness_(Max) '0.028_ (0.71mm)'
 PRP Tolerance '-20%, +80%'
 PRP Value '0.1µF'
 PRP Voltage_-_Rated '50V'
-TOP 0 0.1870079 1.2185039 0 N 51 51 1
-TOP 1 0.1870079 1.281496 0 N 78 30 2
+TOP 0 0.1870079 1.2185039 0 N 51 47 1
+TOP 1 0.1870079 1.281496 0 N 78 11 2
 #
-# CMP 1
+# CMP 3
 CMP 40 0.3543307 2.4409449 180 N U10 ACS712ELCTR30AT ;0=1,1=0.0000,5=0
 PRP Availability 'In Stock'
 PRP Check_prices 'https://www.snapeda.com/parts/ACS712ELCTR-30A-T/Allegro+Industries/view-part/?ref=eda'
@@ -59,16 +127,16 @@ PRP Price 'None'
 PRP Purchase-URL 'https://pricing.snapeda.com/search/part/ACS712ELCTR-30A-T/?ref=eda'
 PRP SnapEDA_Link 'https://www.snapeda.com/parts/ACS712ELCTR-30A-T/Allegro+Industries/view-part/?ref=snap'
 PRP Value ''
-TOP 0 0.2568898 2.3659449 0 N 78 10 1
-TOP 1 0.2568898 2.4159449 0 N 78 9 2
-TOP 2 0.2568898 2.4659449 0 N 63 3 3
-TOP 3 0.2568898 2.5159449 0 N 63 2 4
-TOP 4 0.4517716 2.5159449 0 N 51 40 5
+TOP 0 0.2568898 2.3659449 0 N 78 5 1
+TOP 1 0.2568898 2.4159449 0 N 78 6 2
+TOP 2 0.2568898 2.4659449 0 N 63 2 3
+TOP 3 0.2568898 2.5159449 0 N 63 3 4
+TOP 4 0.4517716 2.5159449 0 N 51 56 5
 TOP 5 0.4517716 2.4659449 0 N 37 1 6
 TOP 6 0.4517716 2.4159449 0 N 65 0 7
 TOP 7 0.4517716 2.3659449 0 N 81 27 8
 #
-# CMP 2
+# CMP 4
 CMP 39 1.3795276 1.3287402 90 N U9 TLC2272QDR ;0=1,1=0.0000,5=0
 PRP Check_prices 'https://www.snapeda.com/parts/TLC2272QDR/Texas+Instruments/view-part/?ref=eda'
 PRP MF 'Texas Instruments'
@@ -76,16 +144,16 @@ PRP MP 'TLC2272QDR'
 PRP Package 'SOIC-8 Texas Instruments'
 PRP SnapEDA_Link 'https://www.snapeda.com/parts/TLC2272QDR/Texas+Instruments/view-part/?ref=snap'
 PRP Value ''
-TOP 0 1.3045276 1.4259843 90 N 47 1 1
-TOP 1 1.3545276 1.4259843 90 N 47 0 2
+TOP 0 1.3045276 1.4259843 90 N 47 0 1
+TOP 1 1.3545276 1.4259843 90 N 47 1 2
 TOP 2 1.4045276 1.4259843 90 N 11 1 3
-TOP 3 1.4545276 1.4259843 90 N 51 59 4
+TOP 3 1.4545276 1.4259843 90 N 51 15 4
 TOP 4 1.4545276 1.2314961 90 N 0 10 5
 TOP 5 1.4045276 1.2314961 90 N 0 11 6
 TOP 6 1.3545276 1.2314961 90 N 0 8 7
-TOP 7 1.3045276 1.2314961 90 N 81 19 8
+TOP 7 1.3045276 1.2314961 90 N 81 24 8
 #
-# CMP 3
+# CMP 5
 CMP 37 1.7667323 1.8700787 270 N R38 4.7_kOhms ;0=1,1=0.0276,5=0
 PRP ComponentLink1Description 'Datasheet'
 PRP ComponentLink1URL 'http://www.yageo.com/NewPortal/yageodocoutput?fileName=/pdf/R-Chip/PYu-RC_51_RoHS_P_0.pdf'
@@ -118,10 +186,10 @@ PRP Supplier_Part_Number_1 'YAG1325CT-ND'
 PRP Temperature_Coefficient '±100ppm/°C'
 PRP Tolerance '±1%'
 PRP Value '4.7 kOhms'
-TOP 0 1.7667323 1.8356299 0 N 51 16 1
+TOP 0 1.7667323 1.8356299 0 N 51 43 1
 TOP 1 1.7667323 1.9045275 0 N 12 2 2
 #
-# CMP 4
+# CMP 6
 CMP 37 1.7322835 2.007874 180 N R37 100_Ohms ;0=1,1=0.0276,5=0
 PRP ComponentLink1Description 'Datasheet'
 PRP ComponentLink1URL 'http://www.yageo.com/NewPortal/yageodocoutput?fileName=/pdf/R-Chip/PYu-RC_51_RoHS_P_0.pdf'
@@ -157,7 +225,7 @@ PRP Value '100 Ohms'
 TOP 0 1.6978347 2.007874 90 N 26 1 1
 TOP 1 1.7667323 2.007874 90 N 12 0 2
 #
-# CMP 5
+# CMP 7
 CMP 52 1.7795275 2.8149606 0 N R36 10_kOhms ;0=1,1=0.0276,5=0
 PRP ComponentLink1Description 'Datasheet'
 PRP ComponentLink1URL 'https://www.yageo.com/upload/media/product/app/datasheet/rchip/pyu-rt_1-to-0.01_rohs_l.pdf'
@@ -188,10 +256,10 @@ PRP Supplier_Part_Number_1 '13-RT0805CRE0710KLCT-ND'
 PRP Temperature_Coefficient '±50ppm/°C'
 PRP Tolerance '±0.25%'
 PRP Value '10 kOhms'
-TOP 0 1.8208661 2.8149606 180 N 81 20 1
+TOP 0 1.8208661 2.8149606 180 N 81 26 1
 TOP 1 1.7381889 2.8149606 180 N 42 0 2
 #
-# CMP 6
+# CMP 8
 CMP 37 1.4025591 1.8011811 0 N R35 1_kOhms ;0=1,1=0.0276,5=0
 PRP ComponentLink1Description 'Datasheet'
 PRP ComponentLink1URL 'http://www.vishay.com/docs/20035/dcrcwe3.pdf'
@@ -228,7 +296,7 @@ PRP Value '1 kOhms'
 TOP 0 1.4370079 1.8011811 270 N 27 0 1
 TOP 1 1.3681103 1.8011811 270 N 68 0 2
 #
-# CMP 7
+# CMP 9
 CMP 37 1.6830709 1.8700787 90 N R34 4.7_kOhms ;0=1,1=0.0276,5=0
 PRP ComponentLink1Description 'Datasheet'
 PRP ComponentLink1URL 'http://www.yageo.com/NewPortal/yageodocoutput?fileName=/pdf/R-Chip/PYu-RC_51_RoHS_P_0.pdf'
@@ -262,9 +330,9 @@ PRP Temperature_Coefficient '±100ppm/°C'
 PRP Tolerance '±1%'
 PRP Value '4.7 kOhms'
 TOP 0 1.6830709 1.9045275 180 N 25 0 1
-TOP 1 1.6830709 1.8356299 180 N 78 24 2
+TOP 1 1.6830709 1.8356299 180 N 78 18 2
 #
-# CMP 8
+# CMP 10
 CMP 52 1.7795275 2.9133858 0 N R33 10_kOhms ;0=1,1=0.0276,5=0
 PRP ComponentLink1Description 'Datasheet'
 PRP ComponentLink1URL 'https://www.yageo.com/upload/media/product/app/datasheet/rchip/pyu-rt_1-to-0.01_rohs_l.pdf'
@@ -295,10 +363,10 @@ PRP Supplier_Part_Number_1 '13-RT0805CRE0710KLCT-ND'
 PRP Temperature_Coefficient '±50ppm/°C'
 PRP Tolerance '±0.25%'
 PRP Value '10 kOhms'
-TOP 0 1.8208661 2.9133858 180 N 81 11 1
+TOP 0 1.8208661 2.9133858 180 N 81 10 1
 TOP 1 1.7381889 2.9133858 180 N 43 0 2
 #
-# CMP 9
+# CMP 11
 CMP 52 1.230315 1.3287402 90 N R32 120_Ohms ;0=1,1=0.0276,5=0
 PRP ComponentLink1Description 'Datasheet'
 PRP ComponentLink1URL 'https://www.yageo.com/upload/media/product/app/datasheet/rchip/pyu-rt_1-to-0.01_rohs_l.pdf'
@@ -332,7 +400,7 @@ PRP Value '120 Ohms'
 TOP 0 1.230315 1.3700788 90 N 50 0 1
 TOP 1 1.230315 1.2874016 90 N 11 0 2
 #
-# CMP 10
+# CMP 12
 CMP 37 0.9142664 2.6708661 180 N R29 10_kOhms ;0=1,1=0.0276,5=0
 PRP ComponentLink1Description 'Datasheet'
 PRP ComponentLink1URL 'https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RT_1-to-0.01_RoHS_L_11.pdf'
@@ -365,9 +433,9 @@ PRP Temperature_Coefficient '±25ppm/°C'
 PRP Tolerance '±0.5%'
 PRP Value '10 kOhms'
 TOP 0 0.8798176 2.6708661 90 N 61 0 1
-TOP 1 0.9487152 2.6708661 90 N 81 16 2
+TOP 1 0.9487152 2.6708661 90 N 81 9 2
 #
-# CMP 11
+# CMP 13
 CMP 37 3.4815206 0.135811 180 N R28 4.7_kOhms ;0=1,1=0.0276,5=0
 PRP ComponentLink1Description 'Datasheet'
 PRP ComponentLink1URL 'http://www.yageo.com/NewPortal/yageodocoutput?fileName=/pdf/R-Chip/PYu-RC_51_RoHS_P_0.pdf'
@@ -400,10 +468,10 @@ PRP Supplier_Part_Number_1 'YAG1325CT-ND'
 PRP Temperature_Coefficient '±100ppm/°C'
 PRP Tolerance '±1%'
 PRP Value '4.7 kOhms'
-TOP 0 3.4470718 0.135811 90 N 51 60 1
+TOP 0 3.4470718 0.135811 90 N 51 64 1
 TOP 1 3.5159694 0.135811 90 N 14 2 2
 #
-# CMP 12
+# CMP 14
 CMP 37 3.6293799 0.135811 0 N R27 100_Ohms ;0=1,1=0.0276,5=0
 PRP ComponentLink1Description 'Datasheet'
 PRP ComponentLink1URL 'http://www.yageo.com/NewPortal/yageodocoutput?fileName=/pdf/R-Chip/PYu-RC_51_RoHS_P_0.pdf'
@@ -439,7 +507,7 @@ PRP Value '100 Ohms'
 TOP 0 3.6638287 0.135811 270 N 28 1 1
 TOP 1 3.5949311 0.135811 270 N 14 1 2
 #
-# CMP 13
+# CMP 15
 CMP 52 7.7460631 0.7755906 90 N R26 10_kOhms ;0=1,1=0.0276,5=0
 PRP ComponentLink1Description 'Datasheet'
 PRP ComponentLink1URL 'https://www.yageo.com/upload/media/product/app/datasheet/rchip/pyu-rt_1-to-0.01_rohs_l.pdf'
@@ -473,7 +541,7 @@ PRP Value '10 kOhms'
 TOP 0 7.7460631 0.8169292 90 N 45 0 1
 TOP 1 7.7460631 0.734252 90 N 19 0 2
 #
-# CMP 14
+# CMP 16
 CMP 52 7.4212598 0.7775591 90 N R25 10_kOhms ;0=1,1=0.0276,5=0
 PRP ComponentLink1Description 'Datasheet'
 PRP ComponentLink1URL 'https://www.yageo.com/upload/media/product/app/datasheet/rchip/pyu-rt_1-to-0.01_rohs_l.pdf'
@@ -507,7 +575,7 @@ PRP Value '10 kOhms'
 TOP 0 7.4212598 0.8188977 90 N 67 0 1
 TOP 1 7.4212598 0.7362205 90 N 20 0 2
 #
-# CMP 15
+# CMP 17
 CMP 52 7.1062993 0.7775592 90 N R24 10_kOhms ;0=1,1=0.0276,5=0
 PRP ComponentLink1Description 'Datasheet'
 PRP ComponentLink1URL 'https://www.yageo.com/upload/media/product/app/datasheet/rchip/pyu-rt_1-to-0.01_rohs_l.pdf'
@@ -541,7 +609,7 @@ PRP Value '10 kOhms'
 TOP 0 7.1062993 0.8188978 90 N 49 0 1
 TOP 1 7.1062993 0.7362206 90 N 21 0 2
 #
-# CMP 16
+# CMP 18
 CMP 37 0.8858268 4.3733113 270 N R22 10_kOhms ;0=1,1=0.0276,5=0
 PRP ComponentLink1Description 'Datasheet'
 PRP ComponentLink1URL 'https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RT_1-to-0.01_RoHS_L_11.pdf'
@@ -576,7 +644,7 @@ PRP Value '10 kOhms'
 TOP 0 0.8858268 4.3388625 0 N 69 0 1
 TOP 1 0.8858268 4.4077601 0 N 13 0 2
 #
-# CMP 17
+# CMP 19
 CMP 37 4.1240157 0.3051181 90 N R23 1_kOhms ;0=1,1=0.0276,5=0
 PRP ComponentLink1Description 'Datasheet'
 PRP ComponentLink1URL 'http://www.vishay.com/docs/20035/dcrcwe3.pdf'
@@ -613,7 +681,7 @@ PRP Value '1 kOhms'
 TOP 0 4.1240157 0.3395669 180 N 29 0 1
 TOP 1 4.1240157 0.2706693 180 N 46 0 2
 #
-# CMP 18
+# CMP 20
 CMP 52 7.746063 0.5511811 270 N R21 10_kOhms ;0=1,1=0.0276,5=0
 PRP ComponentLink1Description 'Datasheet'
 PRP ComponentLink1URL 'https://www.yageo.com/upload/media/product/app/datasheet/rchip/pyu-rt_1-to-0.01_rohs_l.pdf'
@@ -644,10 +712,10 @@ PRP Supplier_Part_Number_1 '13-RT0805CRE0710KLCT-ND'
 PRP Temperature_Coefficient '±50ppm/°C'
 PRP Tolerance '±0.25%'
 PRP Value '10 kOhms'
-TOP 0 7.746063 0.5098425 270 N 81 22 1
+TOP 0 7.746063 0.5098425 270 N 81 8 1
 TOP 1 7.746063 0.5925197 270 N 19 1 2
 #
-# CMP 19
+# CMP 21
 CMP 52 7.4212598 0.5511811 270 N R20 10_kOhms ;0=1,1=0.0276,5=0
 PRP ComponentLink1Description 'Datasheet'
 PRP ComponentLink1URL 'https://www.yageo.com/upload/media/product/app/datasheet/rchip/pyu-rt_1-to-0.01_rohs_l.pdf'
@@ -678,10 +746,10 @@ PRP Supplier_Part_Number_1 '13-RT0805CRE0710KLCT-ND'
 PRP Temperature_Coefficient '±50ppm/°C'
 PRP Tolerance '±0.25%'
 PRP Value '10 kOhms'
-TOP 0 7.4212598 0.5098425 270 N 81 26 1
+TOP 0 7.4212598 0.5098425 270 N 81 13 1
 TOP 1 7.4212598 0.5925197 270 N 20 1 2
 #
-# CMP 20
+# CMP 22
 CMP 52 7.1062993 0.5511812 270 N R19 10_kOhms ;0=1,1=0.0276,5=0
 PRP ComponentLink1Description 'Datasheet'
 PRP ComponentLink1URL 'https://www.yageo.com/upload/media/product/app/datasheet/rchip/pyu-rt_1-to-0.01_rohs_l.pdf'
@@ -712,10 +780,10 @@ PRP Supplier_Part_Number_1 '13-RT0805CRE0710KLCT-ND'
 PRP Temperature_Coefficient '±50ppm/°C'
 PRP Tolerance '±0.25%'
 PRP Value '10 kOhms'
-TOP 0 7.1062993 0.5098426 270 N 81 1 1
+TOP 0 7.1062993 0.5098426 270 N 81 12 1
 TOP 1 7.1062993 0.5925198 270 N 21 1 2
 #
-# CMP 21
+# CMP 23
 CMP 37 1.0023621 3.5088584 180 N R18 4.7_kOhms ;0=1,1=0.0276,5=0
 PRP ComponentLink1Description 'Datasheet'
 PRP ComponentLink1URL 'http://www.yageo.com/NewPortal/yageodocoutput?fileName=/pdf/R-Chip/PYu-RC_51_RoHS_P_0.pdf'
@@ -751,7 +819,7 @@ PRP Value '4.7 kOhms'
 TOP 0 0.9679133 3.5088584 90 N 51 13 1
 TOP 1 1.0368109 3.5088584 90 N 15 1 2
 #
-# CMP 22
+# CMP 24
 CMP 37 1.0349355 3.3858269 270 N R17 100_Ohms ;0=1,1=0.0276,5=0
 PRP ComponentLink1Description 'Datasheet'
 PRP ComponentLink1URL 'http://www.yageo.com/NewPortal/yageodocoutput?fileName=/pdf/R-Chip/PYu-RC_51_RoHS_P_0.pdf'
@@ -787,7 +855,7 @@ PRP Value '100 Ohms'
 TOP 0 1.0349355 3.3513781 0 N 31 1 1
 TOP 1 1.0349355 3.4202757 0 N 15 0 2
 #
-# CMP 23
+# CMP 25
 CMP 37 1.1024552 2.7708661 0 N R16 1_kOhms ;0=1,1=0.0276,5=0
 PRP ComponentLink1Description 'Datasheet'
 PRP ComponentLink1URL 'http://www.vishay.com/docs/20035/dcrcwe3.pdf'
@@ -824,7 +892,7 @@ PRP Value '1 kOhms'
 TOP 0 1.136904 2.7708661 270 N 32 0 1
 TOP 1 1.0680064 2.7708661 270 N 62 0 2
 #
-# CMP 24
+# CMP 26
 CMP 8 1.6742126 2.1751969 270 N Q16 DMG3406L-7 ;0=1,1=0.0531,5=0
 PRP ComponentLink1Description 'Datasheet'
 PRP ComponentLink1URL 'https://www.diodes.com/assets/Datasheets/DMG3406L.pdf'
@@ -858,10 +926,10 @@ PRP Technology 'MOSFET (Metal Oxide)'
 PRP Vgs_(Max) '±20V'
 PRP Vgs(Th)_(Max)_@_Id '2V @ 250µA'
 TOP 0 1.7116142 2.1358268 0 N 12 1 1
-TOP 1 1.6368111 2.1358268 0 N 51 19 2
+TOP 1 1.6368111 2.1358268 0 N 51 30 2
 TOP 2 1.6742126 2.214567 0 N 18 0 3
 #
-# CMP 25
+# CMP 27
 CMP 11 3.1200787 0.4429134 0 N Q15 AOD4184A ;0=1,1=0.0945,5=0
 PRP Check_prices 'https://www.snapeda.com/parts/AOD4184A/Alpha+%2526+Omega+Semiconductor+Inc./view-part/?ref=eda'
 PRP MF 'Alpha & Omega Semiconductor Inc.'
@@ -870,10 +938,10 @@ PRP Package 'None'
 PRP SnapEDA_Link 'https://www.snapeda.com/parts/AOD4184A/Alpha+%2526+Omega+Semiconductor+Inc./view-part/?ref=snap'
 PRP Value ''
 TOP 0 3.2100787 0.2818898 90 N 14 3 1
-TOP 1 3.0300787 0.2818898 90 N 51 65 3
+TOP 1 3.0300787 0.2818898 90 N 51 18 3
 TOP 2 3.1200787 0.5389764 270 N 53 3 4
 #
-# CMP 26
+# CMP 28
 CMP 11 3.4153543 0.4429134 0 N Q14 AOD4184A ;0=1,1=0.0945,5=0
 PRP Check_prices 'https://www.snapeda.com/parts/AOD4184A/Alpha+%2526+Omega+Semiconductor+Inc./view-part/?ref=eda'
 PRP MF 'Alpha & Omega Semiconductor Inc.'
@@ -882,10 +950,10 @@ PRP Package 'None'
 PRP SnapEDA_Link 'https://www.snapeda.com/parts/AOD4184A/Alpha+%2526+Omega+Semiconductor+Inc./view-part/?ref=snap'
 PRP Value ''
 TOP 0 3.5053543 0.2818898 90 N 14 0 1
-TOP 1 3.3253543 0.2818898 90 N 51 53 3
+TOP 1 3.3253543 0.2818898 90 N 51 60 3
 TOP 2 3.4153543 0.5389764 270 N 53 4 4
 #
-# CMP 27
+# CMP 29
 CMP 22 0.7283465 4.3700788 0 N Q13 MMSS8050-L-TP ;0=1,1=0.0441,5=0
 PRP ComponentLink1Description 'Datasheet'
 PRP ComponentLink1URL 'https://www.mccsemi.com/pdf/Products/MMSS8050(SOT-23).pdf'
@@ -917,10 +985,10 @@ PRP Transistor_Type 'NPN'
 PRP Vce_Saturation_(Max)_@_Ib__Ic '500mV @ 80mA, 800mA'
 PRP Voltage_-_Collector_Emitter_Breakdown_(Max) '25 V'
 TOP 0 0.7677166 4.4074804 270 N 13 1 1
-TOP 1 0.7677166 4.3326773 270 N 51 63 2
+TOP 1 0.7677166 4.3326773 270 N 51 40 2
 TOP 2 0.6889764 4.3700788 270 N 30 3 3
 #
-# CMP 28
+# CMP 30
 CMP 11 2.8248031 0.4429134 0 N Q12 AOD4184A ;0=1,1=0.0945,5=0
 PRP Check_prices 'https://www.snapeda.com/parts/AOD4184A/Alpha+%2526+Omega+Semiconductor+Inc./view-part/?ref=eda'
 PRP MF 'Alpha & Omega Semiconductor Inc.'
@@ -929,10 +997,10 @@ PRP Package 'None'
 PRP SnapEDA_Link 'https://www.snapeda.com/parts/AOD4184A/Alpha+%2526+Omega+Semiconductor+Inc./view-part/?ref=snap'
 PRP Value ''
 TOP 0 2.9148031 0.2818898 90 N 14 5 1
-TOP 1 2.7348031 0.2818898 90 N 51 55 3
+TOP 1 2.7348031 0.2818898 90 N 51 22 3
 TOP 2 2.8248031 0.5389764 270 N 53 5 4
 #
-# CMP 29
+# CMP 31
 CMP 11 2.5295275 0.4429134 0 N Q11 AOD4184A ;0=1,1=0.0945,5=0
 PRP Check_prices 'https://www.snapeda.com/parts/AOD4184A/Alpha+%2526+Omega+Semiconductor+Inc./view-part/?ref=eda'
 PRP MF 'Alpha & Omega Semiconductor Inc.'
@@ -941,10 +1009,10 @@ PRP Package 'None'
 PRP SnapEDA_Link 'https://www.snapeda.com/parts/AOD4184A/Alpha+%2526+Omega+Semiconductor+Inc./view-part/?ref=snap'
 PRP Value ''
 TOP 0 2.6195275 0.2818898 90 N 14 4 1
-TOP 1 2.4395275 0.2818898 90 N 51 38 3
+TOP 1 2.4395275 0.2818898 90 N 51 11 3
 TOP 2 2.5295275 0.5389764 270 N 53 2 4
 #
-# CMP 30
+# CMP 32
 CMP 11 0.3257876 3.3759843 90 N Q10 AOD4184A ;0=1,1=0.0945,5=0
 PRP Check_prices 'https://www.snapeda.com/parts/AOD4184A/Alpha+%2526+Omega+Semiconductor+Inc./view-part/?ref=eda'
 PRP MF 'Alpha & Omega Semiconductor Inc.'
@@ -953,10 +1021,10 @@ PRP Package 'None'
 PRP SnapEDA_Link 'https://www.snapeda.com/parts/AOD4184A/Alpha+%2526+Omega+Semiconductor+Inc./view-part/?ref=snap'
 PRP Value ''
 TOP 0 0.4868112 3.4659843 0 N 15 3 1
-TOP 1 0.4868112 3.2859843 0 N 51 26 3
+TOP 1 0.4868112 3.2859843 0 N 51 42 3
 TOP 2 0.2297246 3.3759843 180 N 64 3 4
 #
-# CMP 31
+# CMP 33
 CMP 11 0.3257876 3.6515749 90 N Q9 AOD4184A ;0=1,1=0.0945,5=0
 PRP Check_prices 'https://www.snapeda.com/parts/AOD4184A/Alpha+%2526+Omega+Semiconductor+Inc./view-part/?ref=eda'
 PRP MF 'Alpha & Omega Semiconductor Inc.'
@@ -965,10 +1033,10 @@ PRP Package 'None'
 PRP SnapEDA_Link 'https://www.snapeda.com/parts/AOD4184A/Alpha+%2526+Omega+Semiconductor+Inc./view-part/?ref=snap'
 PRP Value ''
 TOP 0 0.4868112 3.7415749 0 N 15 2 1
-TOP 1 0.4868112 3.5615749 0 N 51 25 3
+TOP 1 0.4868112 3.5615749 0 N 51 29 3
 TOP 2 0.2297246 3.6515749 180 N 64 2 4
 #
-# CMP 32
+# CMP 34
 CMP 5 1.4045276 2.1161417 0 N D22 LL4148 ;0=1,1=0.0591,5=0
 PRP Check_prices 'https://www.snapeda.com/parts/LL4148/Onsemi/view-part/?ref=eda'
 PRP MF 'onsemi'
@@ -976,10 +1044,10 @@ PRP MP 'LL4148'
 PRP Package 'SOD-80-2 ON Semiconductor'
 PRP SnapEDA_Link 'https://www.snapeda.com/parts/LL4148/Onsemi/view-part/?ref=snap'
 PRP Value ''
-TOP 0 1.3277559 2.1161417 270 N 51 57 A
+TOP 0 1.3277559 2.1161417 270 N 51 38 A
 TOP 1 1.4812993 2.1161417 270 N 26 3 C
 #
-# CMP 33
+# CMP 35
 CMP 21 1.4025591 1.9568897 180 N D21 LTV-817S-TA ;0=1,1=0.1713,5=0
 PRP ComponentLink1Description 'Datasheet'
 PRP ComponentLink1URL 'http://optoelectronics.liteon.com/upload/download/DS-70-96-0016/LTV-8X7%20series%20201610%20.pdf'
@@ -1015,11 +1083,11 @@ PRP Voltage_-_Forward_(Vf)_(Typ) '1.2V'
 PRP Voltage_-_Isolation '5000Vrms'
 PRP Voltage_-_Output_(Max) '35V'
 TOP 0 1.2234252 1.9068897 90 N 27 1 1
-TOP 1 1.2234252 2.0068897 90 N 51 35 2
+TOP 1 1.2234252 2.0068897 90 N 51 21 2
 TOP 2 1.5816929 2.0068897 90 N 26 2 3
 TOP 3 1.5816929 1.9068897 90 N 25 1 4
 #
-# CMP 34
+# CMP 36
 CMP 5 3.8298923 0.1377946 180 N D19 LL4148 ;0=1,1=0.0591,5=0
 PRP Check_prices 'https://www.snapeda.com/parts/LL4148/Onsemi/view-part/?ref=eda'
 PRP MF 'onsemi'
@@ -1027,10 +1095,10 @@ PRP MP 'LL4148'
 PRP Package 'SOD-80-2 ON Semiconductor'
 PRP SnapEDA_Link 'https://www.snapeda.com/parts/LL4148/Onsemi/view-part/?ref=snap'
 PRP Value ''
-TOP 0 3.906664 0.1377946 90 N 51 42 A
+TOP 0 3.906664 0.1377946 90 N 51 19 A
 TOP 1 3.7531206 0.1377946 90 N 28 3 C
 #
-# CMP 35
+# CMP 37
 CMP 21 3.8277559 0.2893701 0 N D18 LTV-817S-TA ;0=1,1=0.1713,5=0
 PRP ComponentLink1Description 'Datasheet'
 PRP ComponentLink1URL 'http://optoelectronics.liteon.com/upload/download/DS-70-96-0016/LTV-8X7%20series%20201610%20.pdf'
@@ -1066,11 +1134,11 @@ PRP Voltage_-_Forward_(Vf)_(Typ) '1.2V'
 PRP Voltage_-_Isolation '5000Vrms'
 PRP Voltage_-_Output_(Max) '35V'
 TOP 0 4.0068898 0.3393701 270 N 29 1 1
-TOP 1 4.0068898 0.2393701 270 N 51 66 2
+TOP 1 4.0068898 0.2393701 270 N 51 23 2
 TOP 2 3.6486221 0.2393701 270 N 28 2 3
-TOP 3 3.6486221 0.3393701 270 N 78 16 4
+TOP 3 3.6486221 0.3393701 270 N 78 17 4
 #
-# CMP 36
+# CMP 38
 CMP 5 0.5905512 4.3523622 270 N D17 LL4148 ;0=1,1=0.0591,5=0
 PRP Check_prices 'https://www.snapeda.com/parts/LL4148/Onsemi/view-part/?ref=eda'
 PRP MF 'onsemi'
@@ -1079,9 +1147,9 @@ PRP Package 'SOD-80-2 ON Semiconductor'
 PRP SnapEDA_Link 'https://www.snapeda.com/parts/LL4148/Onsemi/view-part/?ref=snap'
 PRP Value ''
 TOP 0 0.5905512 4.4291339 0 N 30 1 A
-TOP 1 0.5905512 4.2755905 0 N 81 5 C
+TOP 1 0.5905512 4.2755905 0 N 81 11 C
 #
-# CMP 37
+# CMP 39
 CMP 10 1.3119095 4.1043307 90 N D16 SS23-TP ;0=1,1=0.0945,5=0
 PRP ComponentLink1Description 'Datasheet'
 PRP ComponentLink1URL 'https://www.mccsemi.com/pdf/Products/SS22-SS210(HSMA).PDF'
@@ -1113,7 +1181,7 @@ PRP Voltage_-_Forward_(Vf)_(Max)_@_If '550mV @ 2A'
 TOP 0 1.3119095 4.1830709 180 N 2 0 1
 TOP 1 1.3119095 4.0255905 180 N 4 0 2
 #
-# CMP 38
+# CMP 40
 CMP 5 1.1349355 3.4202757 270 N D15 LL4148 ;0=1,1=0.0591,5=0
 PRP Check_prices 'https://www.snapeda.com/parts/LL4148/Onsemi/view-part/?ref=eda'
 PRP MF 'onsemi'
@@ -1121,10 +1189,10 @@ PRP MP 'LL4148'
 PRP Package 'SOD-80-2 ON Semiconductor'
 PRP SnapEDA_Link 'https://www.snapeda.com/parts/LL4148/Onsemi/view-part/?ref=snap'
 PRP Value ''
-TOP 0 1.1349355 3.4970474 0 N 51 34 A
+TOP 0 1.1349355 3.4970474 0 N 51 20 A
 TOP 1 1.1349355 3.343504 0 N 31 3 C
 #
-# CMP 39
+# CMP 41
 CMP 21 1.0849355 3.0775594 270 N D14 LTV-817S-TA ;0=1,1=0.1713,5=0
 PRP ComponentLink1Description 'Datasheet'
 PRP ComponentLink1URL 'http://optoelectronics.liteon.com/upload/download/DS-70-96-0016/LTV-8X7%20series%20201610%20.pdf'
@@ -1160,11 +1228,11 @@ PRP Voltage_-_Forward_(Vf)_(Typ) '1.2V'
 PRP Voltage_-_Isolation '5000Vrms'
 PRP Voltage_-_Output_(Max) '35V'
 TOP 0 1.1349355 2.8984255 0 N 32 1 1
-TOP 1 1.0349355 2.8984255 0 N 51 18 2
+TOP 1 1.0349355 2.8984255 0 N 51 36 2
 TOP 2 1.0349355 3.2566932 0 N 31 2 3
-TOP 3 1.1349355 3.2566932 0 N 78 12 4
+TOP 3 1.1349355 3.2566932 0 N 78 16 4
 #
-# CMP 40
+# CMP 42
 CMP 1 0.4232283 2.5885827 0 N C40 1000_pF ;0=1,1=0.0453,5=0
 PRP Applications 'Boardflex Sensitive'
 PRP Capacitance '1000 pF'
@@ -1196,10 +1264,10 @@ PRP Thickness_(Max) '0.039_ (1.00mm)'
 PRP Tolerance '±10%'
 PRP Value '1000 pF'
 PRP Voltage_-_Rated '500V'
-TOP 0 0.4547244 2.5885827 270 N 51 39 1
+TOP 0 0.4547244 2.5885827 270 N 51 55 1
 TOP 1 0.3917323 2.5885827 270 N 37 0 2
 #
-# CMP 41
+# CMP 43
 CMP 1 1.6090558 1.4733089 90 N C39 10_F ;0=1,1=0.0453,5=0
 PRP Applications 'General Purpose'
 PRP Capacitance '10µF'
@@ -1230,10 +1298,10 @@ PRP Thickness_(Max) '0.055_ (1.40mm)'
 PRP Tolerance '±10%'
 PRP Value '10µF'
 PRP Voltage_-_Rated '16V'
-TOP 0 1.6090558 1.504805 180 N 81 8 1
-TOP 1 1.6090558 1.4418129 180 N 51 33 2
+TOP 0 1.6090558 1.504805 180 N 81 7 1
+TOP 1 1.6090558 1.4418129 180 N 51 41 2
 #
-# CMP 42
+# CMP 44
 CMP 1 1.1515748 1.3287402 270 N C38 100_pF ;0=1,1=0.0453,5=0
 PRP Applications 'General Purpose'
 PRP Capacitance '100 pF'
@@ -1264,10 +1332,10 @@ PRP Thickness_(Max) '0.028_ (0.70mm)'
 PRP Tolerance '±10%'
 PRP Value '100 pF'
 PRP Voltage_-_Rated '100V'
-TOP 0 1.1515748 1.2972441 0 N 51 37 1
+TOP 0 1.1515748 1.2972441 0 N 51 17 1
 TOP 1 1.1515748 1.3602362 0 N 50 1 2
 #
-# CMP 43
+# CMP 45
 CMP 1 1.5303156 1.4733089 270 N C37 0.1_F ;0=1,1=0.0453,5=0
 PRP Applications 'General Purpose'
 PRP Capacitance '0.1µF'
@@ -1298,10 +1366,10 @@ PRP Thickness_(Max) '0.028_ (0.71mm)'
 PRP Tolerance '-20%, +80%'
 PRP Value '0.1µF'
 PRP Voltage_-_Rated '50V'
-TOP 0 1.5303156 1.4418128 0 N 51 23 1
-TOP 1 1.5303156 1.5048049 0 N 81 13 2
+TOP 0 1.5303156 1.4418128 0 N 51 14 1
+TOP 1 1.5303156 1.5048049 0 N 81 3 2
 #
-# CMP 44
+# CMP 46
 CMP 1 0.5413386 2.3326772 90 N C36 10_F ;0=1,1=0.0453,5=0
 PRP Applications 'General Purpose'
 PRP Capacitance '10µF'
@@ -1332,10 +1400,10 @@ PRP Thickness_(Max) '0.055_ (1.40mm)'
 PRP Tolerance '±10%'
 PRP Value '10µF'
 PRP Voltage_-_Rated '16V'
-TOP 0 0.5413386 2.3641733 180 N 81 24 1
-TOP 1 0.5413386 2.3011812 180 N 51 43 2
+TOP 0 0.5413386 2.3641733 180 N 81 2 1
+TOP 1 0.5413386 2.3011812 180 N 51 54 2
 #
-# CMP 45
+# CMP 47
 CMP 1 0.4149607 2.2913386 0 N C35 0.1_F ;0=1,1=0.0453,5=0
 PRP Applications 'General Purpose'
 PRP Capacitance '0.1µF'
@@ -1366,10 +1434,10 @@ PRP Thickness_(Max) '0.028_ (0.71mm)'
 PRP Tolerance '-20%, +80%'
 PRP Value '0.1µF'
 PRP Voltage_-_Rated '50V'
-TOP 0 0.4464568 2.2913386 270 N 51 50 1
-TOP 1 0.3834647 2.2913386 270 N 81 15 2
+TOP 0 0.4464568 2.2913386 270 N 51 53 1
+TOP 1 0.3834647 2.2913386 270 N 81 1 2
 #
-# CMP 46
+# CMP 48
 CMP 1 1.6094719 1.3287402 270 N C34 0.1_F ;0=1,1=0.0453,5=0
 PRP Applications 'General Purpose'
 PRP Capacitance '0.1µF'
@@ -1400,10 +1468,10 @@ PRP Thickness_(Max) '0.028_ (0.71mm)'
 PRP Tolerance '-20%, +80%'
 PRP Value '0.1µF'
 PRP Voltage_-_Rated '50V'
-TOP 0 1.6094719 1.2972441 0 N 81 2 1
-TOP 1 1.6094719 1.3602362 0 N 51 41 2
+TOP 0 1.6094719 1.2972441 0 N 81 6 1
+TOP 1 1.6094719 1.3602362 0 N 51 49 2
 #
-# CMP 47
+# CMP 49
 CMP 1 1.5307318 1.3287402 90 N C33 10_F ;0=1,1=0.0453,5=0
 PRP Applications 'General Purpose'
 PRP Capacitance '10µF'
@@ -1434,10 +1502,10 @@ PRP Thickness_(Max) '0.055_ (1.40mm)'
 PRP Tolerance '±10%'
 PRP Value '10µF'
 PRP Voltage_-_Rated '16V'
-TOP 0 1.5307318 1.3602363 180 N 51 45 1
-TOP 1 1.5307318 1.2972442 180 N 81 3 2
+TOP 0 1.5307318 1.3602363 180 N 51 63 1
+TOP 1 1.5307318 1.2972442 180 N 81 5 2
 #
-# CMP 48
+# CMP 50
 CMP 1 7.0098425 1.0905512 270 N C31 10_F ;0=1,1=0.0453,5=0
 PRP Applications 'General Purpose'
 PRP Capacitance '10µF'
@@ -1468,10 +1536,10 @@ PRP Thickness_(Max) '0.055_ (1.40mm)'
 PRP Tolerance '±10%'
 PRP Value '10µF'
 PRP Voltage_-_Rated '16V'
-TOP 0 7.0098425 1.0590551 0 N 51 22 1
-TOP 1 7.0098425 1.1220472 0 N 81 14 2
+TOP 0 7.0098425 1.0590551 0 N 51 12 1
+TOP 1 7.0098425 1.1220472 0 N 81 4 2
 #
-# CMP 49
+# CMP 51
 CMP 1 7.6476379 0.7755906 270 N C30 0.1_F ;0=1,1=0.0453,5=0
 PRP Applications 'General Purpose'
 PRP Capacitance '0.1µF'
@@ -1502,10 +1570,10 @@ PRP Thickness_(Max) '0.028_ (0.71mm)'
 PRP Tolerance '-20%, +80%'
 PRP Value '0.1µF'
 PRP Voltage_-_Rated '50V'
-TOP 0 7.6476379 0.7440945 0 N 51 24 1
+TOP 0 7.6476379 0.7440945 0 N 51 10 1
 TOP 1 7.6476379 0.8070866 0 N 45 1 2
 #
-# CMP 50
+# CMP 52
 CMP 1 7.3228346 0.7775591 270 N C29 0.1_F ;0=1,1=0.0453,5=0
 PRP Applications 'General Purpose'
 PRP Capacitance '0.1µF'
@@ -1536,10 +1604,10 @@ PRP Thickness_(Max) '0.028_ (0.71mm)'
 PRP Tolerance '-20%, +80%'
 PRP Value '0.1µF'
 PRP Voltage_-_Rated '50V'
-TOP 0 7.3228346 0.746063 0 N 51 28 1
+TOP 0 7.3228346 0.746063 0 N 51 9 1
 TOP 1 7.3228346 0.8090551 0 N 67 1 2
 #
-# CMP 51
+# CMP 53
 CMP 1 7.0078741 0.7775592 270 N C28 0.1_F ;0=1,1=0.0453,5=0
 PRP Applications 'General Purpose'
 PRP Capacitance '0.1µF'
@@ -1570,10 +1638,10 @@ PRP Thickness_(Max) '0.028_ (0.71mm)'
 PRP Tolerance '-20%, +80%'
 PRP Value '0.1µF'
 PRP Voltage_-_Rated '50V'
-TOP 0 7.0078741 0.7460631 0 N 51 11 1
+TOP 0 7.0078741 0.7460631 0 N 51 35 1
 TOP 1 7.0078741 0.8090552 0 N 49 1 2
 #
-# CMP 52
+# CMP 54
 CMP 1 1.3090551 3.5080708 90 N C27 0.1_F ;0=1,1=0.0453,5=0
 PRP Applications 'General Purpose'
 PRP Capacitance '0.1µF'
@@ -1604,10 +1672,10 @@ PRP Thickness_(Max) '0.028_ (0.71mm)'
 PRP Tolerance '-20%, +80%'
 PRP Value '0.1µF'
 PRP Voltage_-_Rated '50V'
-TOP 0 1.3090551 3.5395669 180 N 51 30 1
-TOP 1 1.3090551 3.4765748 180 N 81 4 2
+TOP 0 1.3090551 3.5395669 180 N 51 59 1
+TOP 1 1.3090551 3.4765748 180 N 81 23 2
 #
-# CMP 53
+# CMP 55
 CMP 1 1.3090551 3.7415749 270 N C26 0.1_F ;0=1,1=0.0453,5=0
 PRP Applications 'General Purpose'
 PRP Capacitance '0.1µF'
@@ -1638,10 +1706,10 @@ PRP Thickness_(Max) '0.028_ (0.71mm)'
 PRP Tolerance '-20%, +80%'
 PRP Value '0.1µF'
 PRP Voltage_-_Rated '50V'
-TOP 0 1.3090551 3.7100788 0 N 51 10 1
+TOP 0 1.3090551 3.7100788 0 N 51 65 1
 TOP 1 1.3090551 3.7730709 0 N 4 1 2
 #
-# CMP 54
+# CMP 56
 CMP 1 4.8326772 0.5807087 0 N C23 0.1_F ;0=1,1=0.0453,5=0
 PRP Applications 'General Purpose'
 PRP Capacitance '0.1µF'
@@ -1672,10 +1740,10 @@ PRP Thickness_(Max) '0.028_ (0.71mm)'
 PRP Tolerance '-20%, +80%'
 PRP Value '0.1µF'
 PRP Voltage_-_Rated '50V'
-TOP 0 4.8641733 0.5807087 270 N 51 14 1
-TOP 1 4.8011812 0.5807087 270 N 81 21 2
+TOP 0 4.8641733 0.5807087 270 N 51 31 1
+TOP 1 4.8011812 0.5807087 270 N 81 22 2
 #
-# CMP 55
+# CMP 57
 CMP 1 4.1240157 4.3405512 180 N C22 0.1_F ;0=1,1=0.0453,5=0
 PRP Applications 'General Purpose'
 PRP Capacitance '0.1µF'
@@ -1706,6 +1774,6 @@ PRP Thickness_(Max) '0.028_ (0.71mm)'
 PRP Tolerance '-20%, +80%'
 PRP Value '0.1µF'
 PRP Voltage_-_Rated '50V'
-TOP 0 4.0925196 4.3405512 90 N 51 62 1
-TOP 1 4.1555117 4.3405512 90 N 81 23 2
+TOP 0 4.0925196 4.3405512 90 N 51 46 1
+TOP 1 4.1555117 4.3405512 90 N 81 21 2
 #

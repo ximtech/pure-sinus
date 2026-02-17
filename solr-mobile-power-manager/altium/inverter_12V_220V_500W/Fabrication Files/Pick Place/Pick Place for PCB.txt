@@ -1,16 +1,18 @@
 Altium Designer Pick and Place Locations
-C:\Users\Stason\Desktop\Projects\pure-sinus\hardware\invertor_12V_220V_500W\.\Fabrication Files\Pick Place\Pick Place for PCB.txt
+C:\Users\Stason\Desktop\Projects\pure-sinus\solr-mobile-power-manager\altium\inverter_12V_220V_500W\.\Fabrication Files\Pick Place\Pick Place for PCB.txt
 
 ========================================================================================================================
 File Design Information:
 
-Date:       24.12.25
-Time:       11:03
-Revision:   Not in VersionControl
+Date:       09.02.26
+Time:       20:41
+Revision:   46b1b343fd665dca32aecd123065a6633ba5a092
 Variant:    No variations
 Units used: mm
 
 Designator Comment            Layer       Footprint                   Center-X(mm) Center-Y(mm) Rotation Description                                                                                                                                                                                                                                                       
+C44        0.1µF              BottomLayer CAP_0805_2012               122.7500     20.5000      180      "CAP CER 0.1UF 50V Y5V 0805"                                                                                                                                                                                                                                      
+C43        0.1µF              BottomLayer CAP_0805_2012               101.4432     107.0142     270      "CAP CER 0.1UF 50V Y5V 0805"                                                                                                                                                                                                                                      
 C42        "2.2uF 630V"       TopLayer    CAPRR2250W80L2530T1240H1770 165.7500     45.0000      90       ""                                                                                                                                                                                                                                                                
 C41        0.1µF              BottomLayer CAP_0805_2012               4.7500       31.7500      90       "CAP CER 0.1UF 50V Y5V 0805"                                                                                                                                                                                                                                      
 C20        "1nF 1kV"          TopLayer    CAP_RDER73A103K2K1H03B      146.5104     104.7500     90       "Lead Capacitor X7R_EIA_ with Capacitance: 10000pF and Rated Voltage: 1000Vdc"                                                                                                                                                                                    

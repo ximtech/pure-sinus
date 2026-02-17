@@ -1,4 +1,4 @@
-DRC Rules Export File for PCB: C:\Users\Stason\Desktop\Projects\pure-sinus\hardware\invertor_12V_220V_500W\PCB.PcbDoc
+DRC Rules Export File for PCB: C:\Users\Stason\Desktop\Projects\pure-sinus\solr-mobile-power-manager\altium\inverter_12V_220V_500W\PCB.PcbDoc
 RuleKind=Clearance|RuleName=PadToViaClearance|Scope=Board|Minimum=1.00
 RuleKind=SolderMaskExpansion|RuleName=SolderMaskExpansionToHoles|Scope=Board|Minimum=3.94
 RuleKind=MinimumAnnularRing|RuleName=MinimumAnnularRing|Scope=Board|Minimum=5.91

@@ -9,7 +9,7 @@
 #define BUZZER_PIN            10
 #define INVERTER_SWITCH_PIN   11
 #define DC_LOAD_SWITCH_PIN     8
-#define COOLING_FAN_PIN       12    // TODO: change to PWM pin -> 3,5,6,9,10,11 -> [3]
+#define COOLING_FAN_PIN        3
 
 #define VOLTAGE_SENSOR_PIN           A0
 #define DC_CURRENT_SENSOR_PIN        A1
@@ -24,17 +24,17 @@
 #define VOLTAGE_READ_COUNT          4
 #define MIN_BATTERY_VOLTAGE         9.9f    // 3.3V * 3S -> 0%
 #define BATTERY_RECOVERY_VOLTAGE    10.8f  // 3.6V * 3S -> 10%
-#define MAX_ALLOWED_BATTERY_VOLTAGE 13.0f
+#define MAX_ALLOWED_BATTERY_VOLTAGE 12.9f
 #define LOW_BATTERY_SIGNAL_COUNT    10
 
-#define CURRENT_READ_CYCLES            10
+#define CURRENT_READ_CYCLES            50
 #define MAX_DC_LOAD_CURRENT            15.0f
 #define MAX_INVERTER_PRIMARY_CURRENT   30.0f
 #define MAX_TOTAL_LOAD_CURRENT         30.0f
 #define CURRENT_OVERLOAD_TIMEOUT_MS    (5 * 1000)
 #define MAX_SEQUENTIAL_OVERLOAD_COUNT   4
 
-#define TEMPERATURE_SAMPLING_COUNT      10
+#define TEMPERATURE_SAMPLING_COUNT      25
 #define OVER_TEMPERATURE_TIMEOUT_MS     (5 * 60000)   // 5 minutes
 #define TEMPERATURE_READ_INTERVAL_MS    (1 * 1000)    // read temperature every second
 #define OVER_TEMPERATURE_SIGNAL_COUNT   10
@@ -47,9 +47,9 @@ typedef enum ControllerState{
     STATE_FATAL_ERROR,  // short circuit in a load etc. Cannot recover
 } ControllerState;
 
-typedef enum CoolingFanSpeed {  // TODO: change to PWM control values
+typedef enum CoolingFanSpeed {
     COOLING_FAN_OFF = 0,
-    COOLING_FAN_LOW = 128,
+    COOLING_FAN_LOW = 64,
     COOLING_FAN_MEDIUM = 128,
     COOLING_FAN_HIGH = 255,
 } CoolingFanSpeed;
@@ -150,9 +150,11 @@ void setup() {
     dcLoadCurrentSensor.mA_DC(100);
     inverterCurrentSensor.mA_DC(100);
     getBatteryVoltage(100);
-    playStartupSound(BUZZER_PIN);
 
-    // TODO: implement self check: cooling fan short enable, input voltage, sensors etc.
+    setCoolingFanSpeed(COOLING_FAN_HIGH);   // run fan at high speed for a moment to check it's working
+    delay(100);
+    setCoolingFanSpeed(COOLING_FAN_OFF);
+    playStartupSound(BUZZER_PIN);
 }
 
 void loop() {
@@ -238,7 +240,7 @@ static void handleTemperatureSensors() {
     uint64_t currentMillis = millis();
     if ((currentMillis - previousTemperatureReadMs) >= TEMPERATURE_READ_INTERVAL_MS) {
         primarySideTemp = getTemperature(primaryTemperatureSensor);
-        secondarySideTemp = 0.0; //secondaryTemperatureSensor.readTemp();
+        secondarySideTemp = getTemperature(secondaryTemperatureSensor);
 
         TemperatureRange primaryTempRange = getTemperatureRange(primarySideTemp);
         TemperatureRange secondaryTempRange = getTemperatureRange(secondarySideTemp);
