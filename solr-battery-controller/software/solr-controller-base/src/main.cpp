@@ -2,13 +2,14 @@
 
 #include "Sound.h"
 #include "ACS712.h"
-#include "BatteryTypeEnum.h"
+#include "BatteryCharger.h"
 
 #define DEBUG_EN_PIN         9
 #define BUILD_IN_LED_PIN    13
 #define BUZZER_PIN          10
 #define LOAD_OUT_PIN        11
-#define COOLING_FAN_PIN     12
+#define CHARGER_PIN         3
+#define BATTERY_OUT_PIN     5
 #define ACS_SENSOR_PIN      A1
 #define VOLTAGE_SENSOR_PIN  A0
 
@@ -20,15 +21,10 @@
 #define CURRENT_CORRECTION_COEFFICIENT  0.4f
 #define CURRENT_OVERLOAD_TIMEOUT_MS     5000
 #define LOW_BATTERY_SIGNAL_COUNT        10
+#define ERROR_SIGNAL_DELAY_MS           500
 
-#define CURRENT_VALUE_FOR_FAN_MAX_SPEED 10.0f
-#define CURRENT_VALUE_FOR_FAN_MID_SPEED 5.0f
-#define FAN_SPEED_100_PERCENTS 255
-#define FAN_SPEED_50_PERCENTS  128
-#define FAN_SPEED_0_PERCENTS   0
-
-static const BatteryType batteryType = LI_ION_3S;
-#define MAX_LOAD_CURRENT              MAX_BATTERY_LOAD_CURRENT_AMPS
+static const BatteryType batteryType = SEALED_LEAD_ACID_BATTERY;
+#define MAX_LOAD_CURRENT              30
 #define MIN_BATTERY_VOLTAGE           getBatteryMinVoltage(batteryType)
 #define BATTERY_RECOVERY_VOLTAGE      getBatteryRecoveryVoltage(batteryType)
 
@@ -47,19 +43,20 @@ static const float R2 = 7500;
 static const float correctionFactor = 0.2f;
 
 static uint8_t lowBatterySignalCounter = 0;
-
 //  Arduino NANO has 5.0 volt with a max ADC value of 1023 steps
 //  ACS712 30A uses 66mV per A
 static ACS712 ACS712_CURRENT_SENSOR(ACS_SENSOR_PIN, MCU_SUPPLY_VOLTAGE, ADC_RESOLUTION, 66);
-
 static uint32_t loadEnableTimeout = 0;
+static uint32_t lowBatterySignalTimer = 0;
+static uint32_t overCurrentSignalTimer = 0;
 
 static float getPowerSupplyVoltage(uint16_t samplingCount);
 static float getLoadAmps(ACS712 acs);
 
+static inline void batteryOutOn();
+static inline void batteryOutOff();
 static inline void ledToggle();
 static inline void ledOff();
-static inline void setCoolingFanSpeed(int16_t adcValue);
 static inline void outputRelayOn();
 static inline void outputRelayOff();
 
@@ -69,11 +66,12 @@ void setup() {
     pinMode(BUILD_IN_LED_PIN, OUTPUT);
     pinMode(LOAD_OUT_PIN, OUTPUT);
     pinMode(BUZZER_PIN, OUTPUT);
-    pinMode(COOLING_FAN_PIN, OUTPUT);
+    pinMode(CHARGER_PIN, OUTPUT);
     pinMode(DEBUG_EN_PIN, INPUT_PULLUP);
     pinMode(VOLTAGE_SENSOR_PIN, INPUT);
 
-    outputRelayOff();// disable output at startup
+    outputRelayOff();// disable outputs at startup
+    batteryOutOff();
 
     Serial.print("ACS712_LIB_VERSION: ");
     Serial.println(ACS712_LIB_VERSION);
@@ -95,38 +93,47 @@ void setup() {
 
 void loop() {
 
-    bool isDebugEnabled = digitalRead(DEBUG_EN_PIN) == LOW; // check that debug jumper is set to GND
     float batteryVoltage = getPowerSupplyVoltage(VOLTAGE_READ_COUNT);
+    SlaBatteryCharger *batteryCharger = handleSlaBatteryCharger(CHARGER_PIN, batteryVoltage);
+
+    bool isDebugEnabled = digitalRead(DEBUG_EN_PIN) == LOW; // check that debug jumper is set to GND
     if (isDebugEnabled) {
         Serial.print("Battery V= ");
         Serial.println(batteryVoltage, 3);
+        Serial.print(" | Mode: ");
+        Serial.print(batteryCharger->chargeState == SLA_CHARGE_MAIN ? "MAIN" : "FLOAT");
+        Serial.print(" | PWM: ");
+        Serial.println(batteryCharger->pwmValue);
     }
 
     bool isLoadEnabled = digitalRead(LOAD_OUT_PIN) == LOW;
     if (isLoadEnabled && batteryVoltage <= MIN_BATTERY_VOLTAGE) {
         outputRelayOff();
-        return;
+        batteryOutOff();
     }
 
     if (!isLoadEnabled && batteryVoltage < BATTERY_RECOVERY_VOLTAGE) {
-        if (lowBatterySignalCounter < LOW_BATTERY_SIGNAL_COUNT) {
-            signalLowBattery(BUZZER_PIN);
-            lowBatterySignalCounter++;
+        if ((millis() - lowBatterySignalTimer) >= ERROR_SIGNAL_DELAY_MS) {
+            ledToggle();
+
+            if (lowBatterySignalCounter < LOW_BATTERY_SIGNAL_COUNT) {
+                signalLowBattery(BUZZER_PIN);
+                lowBatterySignalCounter++;
+            }
+            lowBatterySignalTimer = millis();
         }
-        ledToggle();
-        delay(500);    // battery is not charged yet, wait some time and return
+        delay(50);    // slaBattery is not charged yet, wait some time and return
         return;
     }
 
     if (lowBatterySignalCounter != 0) {
-        systemUpSound(BUZZER_PIN); // battery charge is at least 10%
+        systemUpSound(BUZZER_PIN); // Battery charge is at least 10%
         lowBatterySignalCounter = 0;
+        lowBatterySignalTimer = 0;
     }
 
-    float loadAmps = 0.0f;
     if (loadEnableTimeout == 0) {
-
-        loadAmps = getLoadAmps(ACS712_CURRENT_SENSOR);
+        float loadAmps = getLoadAmps(ACS712_CURRENT_SENSOR);
         if (isDebugEnabled) {
             Serial.print("Load Amps= ");
             Serial.println(loadAmps, 3);
@@ -134,38 +141,27 @@ void loop() {
 
         if (loadAmps > MAX_LOAD_CURRENT) {
             outputRelayOff();
-            setCoolingFanSpeed(0);
+            batteryOutOff();
             loadEnableTimeout = millis();
             return;
         }
         outputRelayOn();
+        batteryOutOn();
         ledOff();
     }
 
     uint32_t currentMillis = millis();
     bool isACLoadEnabled = digitalRead(LOAD_OUT_PIN) == LOW;
     if (!isACLoadEnabled && ((currentMillis - loadEnableTimeout) < CURRENT_OVERLOAD_TIMEOUT_MS)) {
-        signalCurrentTooHigh(BUZZER_PIN);
-        ledToggle();
-        delay(500);    // wait some time before the next check
+        if ((currentMillis - overCurrentSignalTimer) >= ERROR_SIGNAL_DELAY_MS) {// wait some time before the next error signal
+            signalCurrentTooHigh(BUZZER_PIN);
+            ledToggle();
+            overCurrentSignalTimer = currentMillis;
+        }
         return;
     }
     loadEnableTimeout = 0;
-
-    int16_t fanSpeed = FAN_SPEED_0_PERCENTS;
-    if (loadAmps >= CURRENT_VALUE_FOR_FAN_MAX_SPEED) {
-        fanSpeed = FAN_SPEED_100_PERCENTS;
-
-    } else if (loadAmps >= CURRENT_VALUE_FOR_FAN_MID_SPEED) {
-        fanSpeed = FAN_SPEED_50_PERCENTS;
-    }
-    setCoolingFanSpeed(fanSpeed);
-
-    if (isDebugEnabled) {
-        Serial.print("Fan Speed= ");
-        Serial.println(fanSpeed);
-        delay(1000);
-    }
+    delay(50);
 }
 
 static float getPowerSupplyVoltage(uint16_t samplingCount) {
@@ -185,16 +181,20 @@ static float getLoadAmps(ACS712 acs) {
     return (amps > MIN_CURRENT_THRESHOLD_VALUE) ? amps : 0.0f;
 }
 
+static inline void batteryOutOn() {
+    digitalWrite(BATTERY_OUT_PIN, HIGH);
+}
+
+static inline void batteryOutOff() {
+    digitalWrite(BATTERY_OUT_PIN, LOW);
+}
+
 static inline void ledToggle() {
     digitalWrite(BUILD_IN_LED_PIN, !digitalRead(BUILD_IN_LED_PIN));
 }
 
 static inline void ledOff() {
     digitalWrite(BUILD_IN_LED_PIN, LOW);
-}
-
-static inline void setCoolingFanSpeed(int16_t adcValue) {
-    analogWrite(COOLING_FAN_PIN, adcValue);
 }
 
 static inline void outputRelayOn() {

@@ -1,0 +1,7 @@
+Removed Pin From Net: NetName=INVERTER_BTN Pin=J1-1
+Removed Pin From Net: NetName=DC_BTN Pin=J1-2
+Removed Pin From Net: NetName=GND Pin=J1-4
+Added Pin To Net: NetName=GND Pin=J1-1
+Added Pin To Net: NetName=DC_BTN Pin=J1-3
+Added Pin To Net: NetName=INVERTER_BTN Pin=J1-4
+Added Rule: Name=Schematic Supply Nets

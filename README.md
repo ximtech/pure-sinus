@@ -163,7 +163,7 @@ This project operates with dangerous voltages
 
 # Solr Battery Controller
 
-A universal `DC 12V 30A` lithium battery controller.
+A universal `DC 12V 30A` battery controller.
 The compact PCB design provides robust protection against battery over-discharge and over-current conditions,
 ensuring maximum battery longevity and optimal performance with integrated power on delay feature.
 
@@ -175,7 +175,8 @@ ensuring maximum battery longevity and optimal performance with integrated power
 - **Low Voltage Protection**: Detects and prevents dangerous voltage drops
 - **Overcurrent Protection**: Output load disconnection on excessive current draw
 - **Power On Delay**: Auto recovery after power interruptions with hysteresis, battery should be charged at least 10% for power on 
-- **Cooling Fan Output**: Automatic fan control based on current consumption. Can be reprogrammed as battery charger
+- **Mosfet Output**: Additional battery output that can be used for powering external devices or loads (`OUT` connector)
+- **Charger Input**: Advanced charging algorithm for 12V batteries (`CHG` connector)
 - **Reverse Polarity Protection**
 - **Compact Design**: 94mm x 70mm
 
@@ -221,6 +222,18 @@ Built with **PlatformIO** and **Arduino Framework** targeting Arduino Nano `ATme
 
 ## Next Version Improvements
 
-- ✅ **Battery Chemistry Flexibility**: Support for LiFePO4, Lead-acid, and other battery types
+- ✅ **Battery Chemistry Flexibility**: Support for SLA, Li-ion, Lead-acid
+
+---
+
+# Solr Button module
+
+Universal two-button PCB module for controlling Solr input, also can be used for other applications. 
+The module is designed to be compact and easy to integrate into various projects.
+
+<img src="solr-button-module/assets/top_pcb.jpg" width="200" alt="solr_button_top_pcb">
+<img src="solr-button-module/assets/bottom_pcb.jpg" width="200" alt="solr_button_bottom_pcb">
+
+**Note:** Button dimensions are `6mm x 6mm` height `5mm`
 
 ---

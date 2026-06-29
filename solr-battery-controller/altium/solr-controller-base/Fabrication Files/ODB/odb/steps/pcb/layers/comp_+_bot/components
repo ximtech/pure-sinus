@@ -1,0 +1,136 @@
+UNITS=INCH
+#
+#Component attribute names
+#
+@0 .comp_mount_type
+@1 .comp_height
+@2 .no_pop
+@3 .comp_ignore
+@4 .comp_variant_list
+@5 .placement_layer
+
+#
+#Component attribute text strings
+#
+&0 bottom_layer
+
+# CMP 0
+CMP 15 2.8838583 2.0472441 90 N R16 4.7_kOhms ;0=1,1=0.0276,5=0
+PRP ComponentLink1Description 'Datasheet'
+PRP ComponentLink1URL 'http://www.yageo.com/NewPortal/yageodocoutput?fileName=/pdf/R-Chip/PYu-RC_51_RoHS_P_0.pdf'
+PRP ComponentLink2Description 'DigiKey Link'
+PRP ComponentLink2URL 'https://www.digikey.com/en/products/detail/yageo/RC0805FR-074K7P/4935340'
+PRP Composition 'Thick Film'
+PRP Device_Package '0805 (2012 Metric)'
+PRP Features 'Moisture Resistant'
+PRP Height_-_Seated_(Max) '0.024_ (0.60mm)'
+PRP id '105'
+PRP LastUpdated '2023-01-02T20:44:51.553'
+PRP Lifecycle_Status 'Active'
+PRP Manufacturer 'Yageo'
+PRP Minimum_Order '1'
+PRP Number_Of_Terminations '2'
+PRP Operating_Temperature '-55°C ~ 155°C'
+PRP Package_/_Case '0805 (2012 Metric)'
+PRP Packaging 'TapeAndReel'
+PRP Part_Number 'RC0805FR-074K7P'
+PRP Part_Status 'Active'
+PRP PartId '27895'
+PRP Power_(Watts) '0.125W, 1/8W'
+PRP Price '0.01'
+PRP Resistance '4.7 kOhms'
+PRP Series 'RC-P Lead Free'
+PRP Size_/_Dimension '0.079_ L x 0.049_ W (2.00mm x 1.25mm)'
+PRP Supplier_1 'DigiKey'
+PRP Supplier_Device_Package '0805'
+PRP Supplier_Part_Number_1 'YAG1325CT-ND'
+PRP Temperature_Coefficient '±100ppm/°C'
+PRP Tolerance '±1%'
+PRP Value '4.7 kOhms'
+TOP 0 2.8838583 2.0816929 180 N 28 12 1
+TOP 1 2.8838583 2.0127953 180 N 1 1 2
+#
+# CMP 1
+CMP 15 2.9860237 1.8700787 180 N R15 100_Ohms ;0=1,1=0.0276,5=0
+PRP ComponentLink1Description 'Datasheet'
+PRP ComponentLink1URL 'http://www.yageo.com/NewPortal/yageodocoutput?fileName=/pdf/R-Chip/PYu-RC_51_RoHS_P_0.pdf'
+PRP ComponentLink2Description 'DigiKey Link'
+PRP ComponentLink2URL 'https://www.digikey.com/en/products/detail/yageo/RC0805FR-07100RP/4935333'
+PRP Composition 'Thick Film'
+PRP Device_Package '0805 (2012 Metric)'
+PRP Features 'Moisture Resistant'
+PRP Height_-_Seated_(Max) '0.024_ (0.60mm)'
+PRP id '489'
+PRP LastUpdated '2023-01-02T20:44:48.083'
+PRP Lifecycle_Status 'Active'
+PRP Manufacturer 'Yageo'
+PRP Minimum_Order '1'
+PRP Number_Of_Terminations '2'
+PRP Operating_Temperature '-55°C ~ 155°C'
+PRP Package_/_Case '0805 (2012 Metric)'
+PRP Packaging 'TapeAndReel'
+PRP Part_Number 'RC0805FR-07100RP'
+PRP Part_Status 'Active'
+PRP PartId '28669'
+PRP Power_(Watts) '0.125W, 1/8W'
+PRP Price '0.01'
+PRP Resistance '100 Ohms'
+PRP Series 'RC-P Lead Free'
+PRP Size_/_Dimension '0.079_ L x 0.049_ W (2.00mm x 1.25mm)'
+PRP Supplier_1 'DigiKey'
+PRP Supplier_Device_Package '0805'
+PRP Supplier_Part_Number_1 'YAG1318CT-ND'
+PRP Temperature_Coefficient '±150ppm/°C'
+PRP Tolerance '±1%'
+PRP Value '100 Ohms'
+TOP 0 2.9515749 1.8700787 90 N 4 2 1
+TOP 1 3.0204725 1.8700787 90 N 1 0 2
+#
+# CMP 2
+CMP 4 3.1814961 2.0472441 270 N Q4 DMG3406L-7 ;0=1,1=0.0945,5=0
+PRP ComponentLink1Description 'Datasheet'
+PRP ComponentLink1URL 'https://www.diodes.com/assets/Datasheets/DMG3406L.pdf'
+PRP ComponentLink2Description 'DigiKey Link'
+PRP ComponentLink2URL 'https://www.digikey.com/en/products/detail/diodes-incorporated/DMG3406L-7/5223203'
+PRP Current_-_Continuous_Drain_(Id)_@_25°C '3.6A (Ta)'
+PRP Drain_To_Source_Voltage_(Vdss) '30 V'
+PRP Drive_Voltage_(Max_Rds_On___Min_Rds_On) '4.5V, 10V'
+PRP FET_Type 'N-Channel'
+PRP Gate_Charge_(Qg)_(Max)_@_Vgs '11.2 nC @ 10 V'
+PRP id '104'
+PRP Input_Capacitance_(Ciss)_(Max)_@_Vds '495 pF @ 15 V'
+PRP LastUpdated '2023-01-02T21:04:51.250'
+PRP Lifecycle_Status 'Active'
+PRP Manufacturer 'Diodes Incorporated'
+PRP Minimum_Order '1'
+PRP Mounting_Type 'Surface Mount'
+PRP Operating_Temperature '-55°C ~ 150°C (TJ)'
+PRP Package_/_Case 'TO-236-3, SC-59, SOT-23-3'
+PRP Packaging 'TapeAndReel'
+PRP Part_Number 'DMG3406L-7'
+PRP Part_Status 'Active'
+PRP Power_Dissipation_(Max) '770mW (Ta)'
+PRP Price '0.05'
+PRP Rds_On_(Max)_@_Id__Vgs '50mOhm @ 3.6A, 10V'
+PRP Series '-'
+PRP Supplier_1 'DigiKey'
+PRP Supplier_Device_Package 'SOT-23-3'
+PRP Supplier_Part_Number_1 'DMG3406L-7DICT-ND'
+PRP Technology 'MOSFET (Metal Oxide)'
+PRP Vgs_(Max) '±20V'
+PRP Vgs(Th)_(Max)_@_Id '2V @ 250µA'
+TOP 0 3.0204725 1.9572441 180 N 1 2 1
+TOP 1 3.0204725 2.1372441 180 N 28 10 3
+TOP 2 3.2775591 2.0472441 0 N 2 0 4
+#
+# CMP 3
+CMP 1 2.7952756 2.0452756 270 N D11 LL4148 ;0=1,1=0.0591,5=0
+PRP Check_prices 'https://www.snapeda.com/parts/LL4148/Onsemi/view-part/?ref=eda'
+PRP MF 'onsemi'
+PRP MP 'LL4148'
+PRP Package 'SOD-80-2 ON Semiconductor'
+PRP SnapEDA_Link 'https://www.snapeda.com/parts/LL4148/Onsemi/view-part/?ref=snap'
+PRP Value ''
+TOP 0 2.7952756 2.1220473 0 N 28 11 A
+TOP 1 2.7952756 1.9685039 0 N 4 3 C
+#

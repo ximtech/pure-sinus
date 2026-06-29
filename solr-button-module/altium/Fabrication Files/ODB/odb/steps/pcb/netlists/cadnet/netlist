@@ -1,0 +1,27 @@
+UNITS=INCH
+H optimize n staggered n
+$0 $NONE$
+$1 DC_BTN
+$2 GND
+$3 INVERTER_BTN
+#
+#Netlist points
+#
+0 0.019685 0.8277559 0.9153543 B e e staggered 0 0 0
+1 0.019685 0.285433 1.4527559 B e e staggered 0 0 0
+1 0.019685 0.5413386 1.4527559 B e e staggered 0 0 0
+1 0.002 0.1584644 1.3996062 D e e staggered 0 0 0
+1 0.019685 0.8277559 1.0137795 B e e staggered 0 0 0
+2 0.019685 0.285433 1.2755905 B e e staggered 0 0 0
+2 0.019685 0.5413386 1.2755905 B e e staggered 0 0 0
+2 0.019685 0.285433 0.4767716 B e e staggered 0 0 0
+2 0.019685 0.5413386 0.4767716 B e e staggered 0 0 0
+2 0.0629922 0.480315 0.1145669 B e e staggered 0 0 0
+2 0.0629922 0.480315 1.8145669 B e e staggered 0 0 0
+2 0.002 0.1584644 1.3366141 D e e staggered 0 0 0
+2 0.002 0.1673228 0.53937 D e e staggered 0 0 0
+2 0.019685 0.8277559 0.8169291 B e e staggered 0 0 0
+3 0.019685 0.285433 0.653937 B e e staggered 0 0 0
+3 0.019685 0.5413386 0.653937 B e e staggered 0 0 0
+3 0.002 0.1673228 0.6023621 D e e staggered 0 0 0
+3 0.019685 0.8277559 1.1122047 B e e staggered 0 0 0

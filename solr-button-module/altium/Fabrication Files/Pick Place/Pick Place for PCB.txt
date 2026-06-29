@@ -1,0 +1,18 @@
+Altium Designer Pick and Place Locations
+C:\Users\Stason\Desktop\Projects\pure-sinus\solr-button-module\altium\.\Fabrication Files\Pick Place\Pick Place for PCB.txt
+
+========================================================================================================================
+File Design Information:
+
+Date:       29.06.26
+Time:       23:32
+Revision:   Not in VersionControl
+Variant:    No variations
+Units used: mm
+
+Designator Comment            Layer       Footprint              Center-X(mm) Center-Y(mm) Rotation Description                                               
+S2         TL1105AF160Q       TopLayer    SW_TL1105AF160Q        10.5000      34.6500      0        "Tactile Switch SPST-NO Top Actuated Through Hole"        
+S1         TL1105AF160Q       TopLayer    SW_TL1105AF160Q        10.5000      14.3600      0        "Tactile Switch SPST-NO Top Actuated Through Hole"        
+J1         B4B-XH-AM_(LF)(SN) BottomLayer JST_B4B-XH-AM_(LF)(SN) 21.0250      24.5000      270      "Connector Header Through Hole 4 position 0.098 (2.50mm)" 
+C2         0.1µF              BottomLayer CAP_0805_2012          4.0250       34.7500      90       "CAP CER 0.1UF 50V Y5V 0805"                              
+C1         0.1µF              BottomLayer CAP_0805_2012          4.2500       14.5000      90       "CAP CER 0.1UF 50V Y5V 0805"                              

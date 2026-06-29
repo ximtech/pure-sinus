@@ -1,15 +1,19 @@
 #include <Arduino.h>
+#include <EnableInterrupt.h>
 
 #include <Sound.h>
 #include "ACS712.h"
 #include "LM35IC.h"
 
-#define DEBUG_ENABLE_PIN       9
-#define BUILD_IN_LED_PIN      13
-#define BUZZER_PIN            10
-#define INVERTER_SWITCH_PIN   11
-#define DC_LOAD_SWITCH_PIN     8
-#define COOLING_FAN_PIN        3
+#define DEBUG_ENABLE_PIN        9
+#define BUILD_IN_LED_PIN        13
+#define BUZZER_PIN              10
+#define AC_INVERTER_SWITCH_PIN  11
+#define DC_LOAD_SWITCH_PIN      8
+#define COOLING_FAN_PIN         3
+
+#define AC_BUTTON_PIN   7
+#define DC_BUTTON_PIN   6
 
 #define VOLTAGE_SENSOR_PIN           A0
 #define DC_CURRENT_SENSOR_PIN        A1
@@ -94,8 +98,14 @@ static uint64_t previousTemperatureReadMs = 0;
 static uint8_t sequentialOverloadCount = 0;
 static uint64_t sequentialOverloadMs = 0;
 
+static volatile boolean isAcInverterEnabled = false;
+static volatile boolean isDcLoadEnabled = false;
+
 static float getBatteryVoltage(uint16_t samplingCount);
 static float getAcsLoadAmps(ACS712 acs);
+
+static void ISR_DcButtonPressed();
+static void ISR_AcInverterButtonPressed();
 
 static void handleBatteryVoltage();
 static void handleDcLoadCurrent();
@@ -116,8 +126,8 @@ static inline TemperatureRange getTemperatureRange(double temperature);
 
 void setup() {
     Serial.begin(9600);
-    pinMode(BUILD_IN_LED_PIN, OUTPUT);
-    pinMode(INVERTER_SWITCH_PIN, OUTPUT);
+    pinMode(BUILD_IN_LED_PIN, OUTPUT);2
+    pinMode(AC_INVERTER_SWITCH_PIN, OUTPUT);
     pinMode(DC_LOAD_SWITCH_PIN, OUTPUT);
     pinMode(BUZZER_PIN, OUTPUT);
     pinMode(COOLING_FAN_PIN, OUTPUT);
@@ -127,6 +137,8 @@ void setup() {
     pinMode(INVERTER_CURRENT_SENSOR_PIN, INPUT);
     pinMode(TL494_LOAD_TEMP_SENSOR_PIN, INPUT);
     pinMode(EGS002_LOAD_TEMP_SENSOR_PIN, INPUT);
+    pinMode(AC_BUTTON_PIN, INPUT);
+    pinMode(DC_BUTTON_PIN, INPUT);
 
     disableAllOutputs();
 
@@ -155,6 +167,10 @@ void setup() {
     delay(100);
     setCoolingFanSpeed(COOLING_FAN_OFF);
     playStartupSound(BUZZER_PIN);
+    isDcLoadEnabled = true; // enable a DC load by default, minimum current consumption on idle and battery meter power supply on startup
+
+    enableInterrupt(DC_BUTTON_PIN, ISR_DcButtonPressed, RISING);
+    enableInterrupt(AC_BUTTON_PIN, ISR_AcInverterButtonPressed, RISING);
 }
 
 void loop() {
@@ -193,6 +209,25 @@ void loop() {
     delay(state == STATE_OK ? 50 : 1000);
 }
 
+static void ISR_DcButtonPressed() { // No need to debounce, hardware debounce circuit is used
+    if (state != STATE_OK) return;
+    isDcLoadEnabled = !isDcLoadEnabled;
+
+    if (isDcLoadEnabled) {
+        dcLoadSwitchOn();
+    } else {
+        dcLoadSwitchOff();
+    }
+}
+
+static void ISR_AcInverterButtonPressed() { // No need to debounce, hardware debounce circuit is used
+    if (state != STATE_OK) return;
+    isAcInverterEnabled = !isAcInverterEnabled;
+    if (!isAcInverterEnabled) {
+        inverterSwitchOff();
+    }
+}
+
 static void handleBatteryVoltage() {
     if (state == STATE_FATAL_ERROR) return;
 
@@ -209,9 +244,15 @@ static void handleBatteryVoltage() {
 }
 
 static void handleDcLoadCurrent() {
-    if (state != STATE_OK) return;
+    if (state != STATE_OK || !isDcLoadEnabled) {
+        dcLoadCurrent = 0.0f;
+        return;
+    }
 
-    dcLoadSwitchOn();
+    if (digitalRead(DC_LOAD_SWITCH_PIN) == LOW) {
+        dcLoadSwitchOn();   // DC load disabled, but button state is ON. This can happen when recovering from error (low battery, overload, etc.) Turn it on to recover state
+    }
+
     dcLoadCurrent = getAcsLoadAmps(dcLoadCurrentSensor);
     if (dcLoadCurrent > MAX_DC_LOAD_CURRENT) {
         disableAllOutputs();
@@ -222,9 +263,18 @@ static void handleDcLoadCurrent() {
 }
 
 static void handleInverterLoadCurrent() {
-    if (state != STATE_OK) return;
+    if (state != STATE_OK || !isAcInverterEnabled) {
+        inverterLoadCurrent = 0.0f;
+        return;
+    }
 
-    inverterSwitchOn();
+    if (digitalRead(AC_INVERTER_SWITCH_PIN) == LOW) {
+        disableInterrupt(AC_BUTTON_PIN);
+        inverterSwitchOn();
+        delay(1000);    // wait for inverter to start and stabilize current, otherwise we can get a false overload reading
+        enableInterrupt(AC_BUTTON_PIN, ISR_AcInverterButtonPressed, RISING);
+    }
+
     inverterLoadCurrent = getAcsLoadAmps(inverterCurrentSensor);
     if (inverterLoadCurrent > MAX_INVERTER_PRIMARY_CURRENT) {
         disableAllOutputs();
@@ -338,11 +388,11 @@ static inline void ledToggle() {
 }
 
 static inline void inverterSwitchOn() {
-    digitalWrite(INVERTER_SWITCH_PIN, HIGH);
+    digitalWrite(AC_INVERTER_SWITCH_PIN, HIGH);
 }
 
 static inline void inverterSwitchOff() {
-    digitalWrite(INVERTER_SWITCH_PIN, LOW);
+    digitalWrite(AC_INVERTER_SWITCH_PIN, LOW);
 }
 
 static inline void dcLoadSwitchOn() {

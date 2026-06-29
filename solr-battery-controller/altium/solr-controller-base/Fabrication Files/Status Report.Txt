@@ -1,11 +1,10 @@
 Output: Bill of Materials
 Type  : BOM
 From  : Variant [[No Variations]] of Project [solr-controller-base.PrjPcb]
-   Generated File[Bill of Materials-solr-controller-base.xls]
-   Generated File[Bill of Materials-solr-controller-base.xls]
+   Generated File[Bill of Materials-solr-controller-base.xlsx]
 
 
-Files Generated   : 2
+Files Generated   : 1
 Documents Printed : 0
 
-Finished Output Generation At 17:16:54 On 31.01.2025
+Finished Output Generation At 19:25:05 On 27.06.2026

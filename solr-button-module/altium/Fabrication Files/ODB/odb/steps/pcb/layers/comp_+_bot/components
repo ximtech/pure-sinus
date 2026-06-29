@@ -1,0 +1,97 @@
+UNITS=INCH
+#
+#Component attribute names
+#
+@0 .comp_mount_type
+@1 .comp_height
+@2 .no_pop
+@3 .comp_ignore
+@4 .comp_variant_list
+@5 .placement_layer
+
+#
+#Component attribute text strings
+#
+&0 bottom_layer
+
+# CMP 0
+CMP 1 0.8070866 0.9645669 90 N J1 B4B-XH-AM_(LF)(SN) ;0=2,1=0.2756,5=0
+PRP Check_prices 'https://www.snapeda.com/parts/B4B-XH-AM(LF)(SN)/JST/view-part/?ref=eda'
+PRP MF 'JST Sales'
+PRP MP 'B4B-XH-AM(LF)(SN)'
+PRP Package 'None'
+PRP SnapEDA_Link 'https://www.snapeda.com/parts/B4B-XH-AM(LF)(SN)/JST/view-part/?ref=snap'
+PRP Value ''
+TOP 0 0.8277559 0.8169291 90 N 2 4 1
+TOP 1 0.8277559 0.9153543 90 N 0 0 2
+TOP 2 0.8277559 1.0137795 90 N 3 1 3
+TOP 3 0.8277559 1.1122047 90 N 1 1 4
+#
+# CMP 1
+CMP 0 0.1584644 1.3681102 270 N C2 0.1_F ;0=1,1=0.0453,5=0
+PRP Applications 'General Purpose'
+PRP Capacitance '0.1µF'
+PRP ComponentLink1Description 'Datasheet'
+PRP ComponentLink1URL 'http://datasheets.avx.com/Y5V.pdf'
+PRP ComponentLink2Description 'DigiKey Link'
+PRP ComponentLink2URL 'http://digikey.com/product-detail/en/avx-corporation/08055G104ZAT2A/478-1421-1-ND/564453'
+PRP Device_Package '0805 (2012 Metric)'
+PRP id '137'
+PRP LastUpdated '2020-09-02T01:04:40.390'
+PRP Lifecycle_Status 'Active'
+PRP Manufacturer 'AVX Corporation'
+PRP Minimum_Order '1'
+PRP Mounting_Type 'Surface Mount, MLCC'
+PRP Operating_Temperature '-30°C ~ 85°C'
+PRP Package_/_Case '0805 (2012 Metric)'
+PRP Packaging 'TapeAndReel'
+PRP Part_Number '08055G104ZAT2A'
+PRP Part_Status 'Active'
+PRP PartId '3166'
+PRP Price '0.02'
+PRP Series '-'
+PRP Size_/_Dimension '0.079_ L x 0.049_ W (2.01mm x 1.25mm)'
+PRP Supplier_1 'DigiKey'
+PRP Supplier_Part_Number_1 '478-1421-1-ND'
+PRP Temperature_Coefficient 'Y5V (F)'
+PRP Thickness_(Max) '0.028_ (0.71mm)'
+PRP Tolerance '-20%, +80%'
+PRP Value '0.1µF'
+PRP Voltage_-_Rated '50V'
+TOP 0 0.1584644 1.3366141 0 N 2 2 1
+TOP 1 0.1584644 1.3996062 0 N 3 0 2
+#
+# CMP 2
+CMP 0 0.1673228 0.5708661 270 N C1 0.1_F ;0=1,1=0.0453,5=0
+PRP Applications 'General Purpose'
+PRP Capacitance '0.1µF'
+PRP ComponentLink1Description 'Datasheet'
+PRP ComponentLink1URL 'http://datasheets.avx.com/Y5V.pdf'
+PRP ComponentLink2Description 'DigiKey Link'
+PRP ComponentLink2URL 'http://digikey.com/product-detail/en/avx-corporation/08055G104ZAT2A/478-1421-1-ND/564453'
+PRP Device_Package '0805 (2012 Metric)'
+PRP id '137'
+PRP LastUpdated '2020-09-02T01:04:40.390'
+PRP Lifecycle_Status 'Active'
+PRP Manufacturer 'AVX Corporation'
+PRP Minimum_Order '1'
+PRP Mounting_Type 'Surface Mount, MLCC'
+PRP Operating_Temperature '-30°C ~ 85°C'
+PRP Package_/_Case '0805 (2012 Metric)'
+PRP Packaging 'TapeAndReel'
+PRP Part_Number '08055G104ZAT2A'
+PRP Part_Status 'Active'
+PRP PartId '3166'
+PRP Price '0.02'
+PRP Series '-'
+PRP Size_/_Dimension '0.079_ L x 0.049_ W (2.01mm x 1.25mm)'
+PRP Supplier_1 'DigiKey'
+PRP Supplier_Part_Number_1 '478-1421-1-ND'
+PRP Temperature_Coefficient 'Y5V (F)'
+PRP Thickness_(Max) '0.028_ (0.71mm)'
+PRP Tolerance '-20%, +80%'
+PRP Value '0.1µF'
+PRP Voltage_-_Rated '50V'
+TOP 0 0.1673228 0.53937 0 N 2 3 1
+TOP 1 0.1673228 0.6023621 0 N 1 0 2
+#

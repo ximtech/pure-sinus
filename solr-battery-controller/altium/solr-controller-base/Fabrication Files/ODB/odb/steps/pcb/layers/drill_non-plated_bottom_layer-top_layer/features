@@ -1,0 +1,25 @@
+UNITS=INCH
+#Layer_Color=9474304
+#
+#Feature symbol names
+#
+$0 r65
+
+#
+#Feature attribute names
+#
+@0 .geometry
+@1 .drill
+
+#
+#Feature attribute text strings
+#
+&0 Pad_Simple_X65.0000Y65.0000H65.0000C105.0000
+
+#
+#Layer features
+#
+P 1.6311024 0.2165354 0 P 0 0 ;0=0,1=1
+P 1.6311024 0.8165354 0 P 0 0 ;0=0,1=1
+P 3.2311024 0.2165354 0 P 0 0 ;0=0,1=1
+P 3.2311024 0.8165354 0 P 0 0 ;0=0,1=1
