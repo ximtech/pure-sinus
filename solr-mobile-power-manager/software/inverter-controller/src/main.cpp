@@ -126,7 +126,7 @@ static inline TemperatureRange getTemperatureRange(double temperature);
 
 void setup() {
     Serial.begin(9600);
-    pinMode(BUILD_IN_LED_PIN, OUTPUT);2
+    pinMode(BUILD_IN_LED_PIN, OUTPUT);
     pinMode(AC_INVERTER_SWITCH_PIN, OUTPUT);
     pinMode(DC_LOAD_SWITCH_PIN, OUTPUT);
     pinMode(BUZZER_PIN, OUTPUT);
