@@ -177,6 +177,7 @@ ensuring maximum battery longevity and optimal performance with integrated power
 - **Power On Delay**: Auto recovery after power interruptions with hysteresis, battery should be charged at least 10% for power on 
 - **Mosfet Output**: Additional battery output that can be used for powering external devices or loads (`OUT` connector)
 - **Charger Input**: Advanced charging algorithm for 12V batteries (`CHG` connector)
+  - CV CC charger required (`XL4015` module), set charging voltage: 14.4V for SLA, 12.6V for Li-ion
 - **Reverse Polarity Protection**
 - **Compact Design**: 94mm x 70mm
 
@@ -222,7 +223,7 @@ Built with **PlatformIO** and **Arduino Framework** targeting Arduino Nano `ATme
 
 ## Next Version Improvements
 
-- ✅ **Battery Chemistry Flexibility**: Support for SLA, Li-ion, Lead-acid
+- ✅ **Battery Chemistry Flexibility**: Support for SLA, Li-ion
 
 ---
 
