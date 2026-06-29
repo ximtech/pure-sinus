@@ -231,8 +231,7 @@ Built with **PlatformIO** and **Arduino Framework** targeting Arduino Nano `ATme
 Universal two-button PCB module for controlling Solr input, also can be used for other applications. 
 The module is designed to be compact and easy to integrate into various projects.
 
-<img src="solr-button-module/assets/top_pcb.jpg" width="150" alt="solr_button_top_pcb">
-<img src="solr-button-module/assets/bottom_pcb.jpg" width="150" alt="solr_button_bottom_pcb">
+<img src="solr-button-module/assets/top_pcb.jpg" width="150" alt="solr_button_top_pcb"><img src="solr-button-module/assets/bottom_pcb.jpg" width="150" alt="solr_button_bottom_pcb">
 
 **Note:** Button dimensions are `6mm x 6mm` height `5mm`
 
